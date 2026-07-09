@@ -51,6 +51,14 @@
             "stepUpSpeed": 0.1
         },
         "floatupwhenstuck": { "onlyWhenDead": true },
+        "selectionboxes": {
+            "selectionBoxes": ["MidUpperAP"]
+        },
+        "rideableaccessories": {
+            "wearableSlots": [
+                { "code": "middlebackupper", "forCategoryCodes": ["saddle-{type}"], "attachmentPointCode": "MidUpperAP" }
+            ]
+        },
         "gait": {
             "enabledByType": { "*-tamed-*": true, "*": false },
             "idleGaits": { "Land": "idle" },
