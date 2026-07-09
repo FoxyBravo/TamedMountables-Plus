@@ -109,7 +109,7 @@
             ]
         },
         "rideable": {
-            "enabledByType": { "*-tamed-*": true, "*": false },
+            "enabledByType": { "*": false },
             "interactMountAnySeat": false,
             "seats": [
                 { "controllable": true,
@@ -147,7 +147,7 @@
             { "code": "gait",
                 "enabledByType": { "*-tamed-*": true, "*": false } },
             { "code": "rideable",
-                "enabledByType": { "*-tamed-*": true, "*": false } },
+                "enabledByType": { "*": false } },
             { "code": "mouthinventory",
                 "acceptStacks": [
                     { "type": "item", "code": "vegetable-carrot" },
