@@ -53,7 +53,7 @@
 			{ "code": "floatupwhenstuck" },
 			{ "code": "breathe" },
 			{ "code": "emotionstates" },
-			{ "code": "taskai" },
+			{ "code": "taskai", "aitasks": [] },
 			{ "code": "pettable" },
 			{ "code": "selectionboxes" },
 			{ "code": "ownable" },

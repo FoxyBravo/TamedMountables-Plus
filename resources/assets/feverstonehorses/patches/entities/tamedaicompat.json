@@ -1,0 +1,600 @@
+[
+    {
+        "__comment": "===TamedAI-Plus Integration - Client Behaviors (horse.json)===",
+        "op": "addeach",
+        "path": "/client/behaviors/-",
+        "value": [
+            { "code": "nametag", "showtagonlywhentargeted": true },
+            { "code": "tameable",
+                "treat": [
+                    { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
+                    { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
+                    { "code": "turnip", "domain": "game", "progress": 0.04, "cooldown": 0.75 },
+                    { "code": "carrotbundle", "domain": "feverstonehorses", "progress": 0.15, "cooldown": 1 },
+                    { "code": "drygrassbundle", "domain": "feverstonehorses", "progress": 0.075, "cooldown": 2 },
+                    { "code": "drygrass", "domain": "game", "progress": 0.025, "cooldown": 0.5 },
+                    { "code": "pinkapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "redapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "yellowapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "flax", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "rye", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "spelt", "domain": "game", "progress": 0.075, "cooldown": 2 }
+                ]
+            }
+        ],
+        "file": "feverstonehorses:entities/land/horse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===TamedAI-Plus Integration - Client Behaviors (foal.json)===",
+        "op": "addeach",
+        "path": "/client/behaviors/-",
+        "value": [
+            { "code": "nametag", "showtagonlywhentargeted": true },
+            { "code": "tameable",
+                "treat": [
+                    { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
+                    { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
+                    { "code": "turnip", "domain": "game", "progress": 0.04, "cooldown": 0.75 },
+                    { "code": "carrotbundle", "domain": "feverstonehorses", "progress": 0.15, "cooldown": 1 },
+                    { "code": "drygrassbundle", "domain": "feverstonehorses", "progress": 0.075, "cooldown": 2 },
+                    { "code": "drygrass", "domain": "game", "progress": 0.025, "cooldown": 0.5 },
+                    { "code": "pinkapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "redapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "yellowapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "flax", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "rye", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "spelt", "domain": "game", "progress": 0.075, "cooldown": 2 }
+                ]
+            }
+        ],
+        "file": "feverstonehorses:entities/land/foal.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===TamedAI-Plus Integration - Server Behaviors (horse.json)===",
+        "op": "addeach",
+        "path": "/server/behaviors/-",
+        "value": [
+            { "code": "nametag", "showtagonlywhentargeted": true },
+            { "code": "tameable",
+                "disobediencePerDay": 0.01,
+                "size": "large",
+                "tameEntityCode": "feverstonehorses:horse-tamed-{gender}-{type}",
+                "treat": [
+                    { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
+                    { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
+                    { "code": "turnip", "domain": "game", "progress": 0.04, "cooldown": 0.75 },
+                    { "code": "carrotbundle", "domain": "feverstonehorses", "progress": 0.15, "cooldown": 1 },
+                    { "code": "drygrassbundle", "domain": "feverstonehorses", "progress": 0.075, "cooldown": 2 },
+                    { "code": "drygrass", "domain": "game", "progress": 0.025, "cooldown": 0.5 },
+                    { "code": "pinkapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "redapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "yellowapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "flax", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "rye", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "spelt", "domain": "game", "progress": 0.075, "cooldown": 2 }
+                ]
+            }
+        ],
+        "file": "feverstonehorses:entities/land/horse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===TamedAI-Plus Integration - Server Behaviors (foal.json)===",
+        "op": "addeach",
+        "path": "/server/behaviors/-",
+        "value": [
+            { "code": "nametag", "showtagonlywhentargeted": true },
+            { "code": "tameable",
+                "disobediencePerDay": 0.01,
+                "size": "small",
+                "tameEntityCode": "feverstonehorses:foal-tamed-{type}",
+                "treat": [
+                    { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
+                    { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
+                    { "code": "turnip", "domain": "game", "progress": 0.04, "cooldown": 0.75 },
+                    { "code": "carrotbundle", "domain": "feverstonehorses", "progress": 0.15, "cooldown": 1 },
+                    { "code": "drygrassbundle", "domain": "feverstonehorses", "progress": 0.075, "cooldown": 2 },
+                    { "code": "drygrass", "domain": "game", "progress": 0.025, "cooldown": 0.5 },
+                    { "code": "pinkapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "redapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "yellowapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "flax", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "rye", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "spelt", "domain": "game", "progress": 0.075, "cooldown": 2 }
+                ]
+            }
+        ],
+        "file": "feverstonehorses:entities/land/foal.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===ReceiveCommand Behavior (horse.json - client & server)===",
+        "op": "addmerge",
+        "path": "/client/behaviors/-",
+        "value": { "code": "receivecommand",
+                    "availableCommands": [
+                        { "commandName": "followmaster", "commandType": "COMPLEX", "minObedience": 0.1 },
+                        { "commandName": "stay", "commandType": "COMPLEX", "minObedience": 0.3 },
+                        { "commandName": "roam", "commandType": "COMPLEX", "minObedience": 0.0 },
+                        { "commandName": "guard", "commandType": "COMPLEX", "minObedience": 0.2 },
+                        { "commandName": "sit", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "lay", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "speak", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "NEUTRAL", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PROTECTIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "AGGRESSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PASSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 }
+                    ]
+                },
+        "file": "feverstonehorses:entities/land/horse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "addmerge",
+        "path": "/client/behaviors/-",
+        "value": { "code": "receivecommand",
+                    "availableCommands": [
+                        { "commandName": "followmaster", "commandType": "COMPLEX", "minObedience": 0.1 },
+                        { "commandName": "stay", "commandType": "COMPLEX", "minObedience": 0.3 },
+                        { "commandName": "roam", "commandType": "COMPLEX", "minObedience": 0.0 },
+                        { "commandName": "guard", "commandType": "COMPLEX", "minObedience": 0.2 },
+                        { "commandName": "sit", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "lay", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "speak", "commandType": "SIMPLE", "minObedience": 0.0 }
+                    ]
+                },
+        "file": "feverstonehorses:entities/land/foal.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/-",
+        "value": { "code": "receivecommand",
+                    "availableCommands": [
+                        { "commandName": "followmaster", "commandType": "COMPLEX", "minObedience": 0.1 },
+                        { "commandName": "stay", "commandType": "COMPLEX", "minObedience": 0.3 },
+                        { "commandName": "roam", "commandType": "COMPLEX", "minObedience": 0.0 },
+                        { "commandName": "guard", "commandType": "COMPLEX", "minObedience": 0.2 },
+                        { "commandName": "sit", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "lay", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "speak", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "NEUTRAL", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PROTECTIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "AGGRESSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PASSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 }
+                    ]
+                },
+        "file": "feverstonehorses:entities/land/horse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/-",
+        "value": { "code": "receivecommand",
+                    "availableCommands": [
+                        { "commandName": "followmaster", "commandType": "COMPLEX", "minObedience": 0.1 },
+                        { "commandName": "stay", "commandType": "COMPLEX", "minObedience": 0.3 },
+                        { "commandName": "roam", "commandType": "COMPLEX", "minObedience": 0.0 },
+                        { "commandName": "guard", "commandType": "COMPLEX", "minObedience": 0.2 },
+                        { "commandName": "sit", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "lay", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "speak", "commandType": "SIMPLE", "minObedience": 0.0 }
+                    ]
+                },
+        "file": "feverstonehorses:entities/land/foal.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===AI Tasks for TamedAI-Plus commands (horse.json - taskai is at index 14)===",
+        "op": "addeach",
+        "path": "/server/behaviors/14/aitasks/-",
+        "value": [
+                {
+                    "code": "followmaster",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "followmaster",
+                    "movespeed": 0.045,
+                    "animationSpeed": 2.2,
+                    "maxDistance": 8,
+                    "searchRange": 40,
+                    "animation": "Gallop",
+                    "allowTeleport": true
+                },
+                {
+                    "code": "stay",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "stay",
+                    "movespeed": 0.006,
+                    "maxDistance": 5,
+                    "searchRange": 20,
+                    "animation": "Walk"
+                },
+                {
+                    "code": "guard",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "guard",
+                    "movespeed": 0.005,
+                    "maxdistance": 50,
+                    "searchRange": 40,
+                    "animation": "Walk",
+                    "animationSpeed": 1.25
+                },
+                {
+                    "code": "petmeleeattack",
+                    "priority": 2,
+                    "entityCodes": [ "wolf-*", "hyena-*", "bear-*", "drifter-*", "hostile-player" ],
+                    "movespeed": 0.045,
+                    "animation": "Gallop",
+                    "animationSpeed": 2.2,
+                    "searchRange": 25,
+                    "isCommandable": true
+                },
+                {
+                    "code": "petflee",
+                    "priority": 4,
+                    "movespeed": 0.05,
+                    "animation": "Run",
+                    "animationSpeed": 2.5,
+                    "fleerange": 25,
+                    "fleeseconds": 4
+                },
+                {
+                    "code": "avoidfire",
+                    "priority": 3,
+                    "movespeed": 0.04,
+                    "searchRange": 8,
+                    "animation": "Run"
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "sit",
+                    "animation": "idle",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "lay",
+                    "animation": "sleeplie",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "speak",
+                    "animation": "neigh",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "happydance",
+                    "priority": 0.5,
+                    "animation": "idle",
+                    "animationSpeed": 2.0
+                }
+            ],
+        "file": "feverstonehorses:entities/land/horse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===AI Tasks for TamedAI-Plus commands (foal.json - taskai is at index 11)===",
+        "op": "addeach",
+        "path": "/server/behaviors/11/aitasks/-",
+        "value": [
+                {
+                    "code": "followmaster",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "followmaster",
+                    "movespeed": 0.045,
+                    "animationSpeed": 2.2,
+                    "maxDistance": 8,
+                    "searchRange": 40,
+                    "animation": "Gallop",
+                    "allowTeleport": true
+                },
+                {
+                    "code": "stay",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "stay",
+                    "movespeed": 0.006,
+                    "maxDistance": 5,
+                    "searchRange": 20,
+                    "animation": "Walk"
+                },
+                {
+                    "code": "guard",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "guard",
+                    "movespeed": 0.005,
+                    "maxdistance": 50,
+                    "searchRange": 40,
+                    "animation": "Walk",
+                    "animationSpeed": 1.25
+                },
+                {
+                    "code": "petmeleeattack",
+                    "priority": 2,
+                    "entityCodes": [ "wolf-*", "hyena-*", "bear-*", "drifter-*" ],
+                    "movespeed": 0.04,
+                    "animation": "Gallop",
+                    "animationSpeed": 2.2,
+                    "searchRange": 20,
+                    "isCommandable": true
+                },
+                {
+                    "code": "petflee",
+                    "priority": 4,
+                    "movespeed": 0.05,
+                    "animation": "Run",
+                    "animationSpeed": 2.5,
+                    "fleerange": 20,
+                    "fleeseconds": 3
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "sit",
+                    "animation": "idle",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "lay",
+                    "animation": "sleeplie",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "speak",
+                    "animation": "neigh",
+                    "minObedience": 0.0
+                }
+            ],
+        "file": "feverstonehorses:entities/land/foal.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===Remove default pettable to replace with pettableextended (horse.json index 19, foal.json index 13)===",
+        "op": "remove",
+        "path": "/server/behaviors/19",
+        "file": "feverstonehorses:entities/land/horse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "remove",
+        "path": "/server/behaviors/13",
+        "file": "feverstonehorses:entities/land/foal.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "add",
+        "path": "/server/behaviors/-",
+        "value": { "code": "pettableextended" },
+        "file": "feverstonehorses:entities/land/horse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "add",
+        "path": "/server/behaviors/-",
+        "value": { "code": "pettableextended" },
+        "file": "feverstonehorses:entities/land/foal.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===Camel: TamedAI-Plus Client Behaviors===",
+        "op": "addeach",
+        "path": "/client/behaviors/-",
+        "value": [
+            { "code": "nametag", "showtagonlywhentargeted": true },
+            { "code": "tameable",
+                "treat": [
+                    { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
+                    { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
+                    { "code": "turnip", "domain": "game", "progress": 0.04, "cooldown": 0.75 },
+                    { "code": "carrotbundle", "domain": "feverstonehorses", "progress": 0.15, "cooldown": 1 },
+                    { "code": "drygrassbundle", "domain": "feverstonehorses", "progress": 0.075, "cooldown": 2 },
+                    { "code": "drygrass", "domain": "game", "progress": 0.025, "cooldown": 0.5 },
+                    { "code": "pinkapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "redapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "yellowapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "flax", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "rye", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "spelt", "domain": "game", "progress": 0.075, "cooldown": 2 }
+                ]
+            }
+        ],
+        "file": "feverstonehorses:entities/land/camel.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===Camel: TamedAI-Plus Server Behaviors (tameable)===",
+        "op": "addeach",
+        "path": "/server/behaviors/-",
+        "value": [
+            { "code": "nametag", "showtagonlywhentargeted": true },
+            { "code": "tameable",
+                "disobediencePerDay": 0.01,
+                "size": "large",
+                "tameEntityCode": "feverstonehorses:camel-tamed-{gender}",
+                "treat": [
+                    { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
+                    { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
+                    { "code": "turnip", "domain": "game", "progress": 0.04, "cooldown": 0.75 },
+                    { "code": "carrotbundle", "domain": "feverstonehorses", "progress": 0.15, "cooldown": 1 },
+                    { "code": "drygrassbundle", "domain": "feverstonehorses", "progress": 0.075, "cooldown": 2 },
+                    { "code": "drygrass", "domain": "game", "progress": 0.025, "cooldown": 0.5 },
+                    { "code": "pinkapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "redapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "yellowapple", "domain": "game", "progress": 0.169, "cooldown": 3 },
+                    { "code": "flax", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "rye", "domain": "game", "progress": 0.075, "cooldown": 2 },
+                    { "code": "spelt", "domain": "game", "progress": 0.075, "cooldown": 2 }
+                ]
+            }
+        ],
+        "file": "feverstonehorses:entities/land/camel.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===Camel: ReceiveCommand Behavior===",
+        "op": "addmerge",
+        "path": "/client/behaviors/-",
+        "value": { "code": "receivecommand",
+                    "availableCommands": [
+                        { "commandName": "followmaster", "commandType": "COMPLEX", "minObedience": 0.1 },
+                        { "commandName": "stay", "commandType": "COMPLEX", "minObedience": 0.3 },
+                        { "commandName": "roam", "commandType": "COMPLEX", "minObedience": 0.0 },
+                        { "commandName": "guard", "commandType": "COMPLEX", "minObedience": 0.2 },
+                        { "commandName": "sit", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "lay", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "speak", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "NEUTRAL", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PROTECTIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "AGGRESSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PASSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 }
+                    ]
+                },
+        "file": "feverstonehorses:entities/land/camel.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/-",
+        "value": { "code": "receivecommand",
+                    "availableCommands": [
+                        { "commandName": "followmaster", "commandType": "COMPLEX", "minObedience": 0.1 },
+                        { "commandName": "stay", "commandType": "COMPLEX", "minObedience": 0.3 },
+                        { "commandName": "roam", "commandType": "COMPLEX", "minObedience": 0.0 },
+                        { "commandName": "guard", "commandType": "COMPLEX", "minObedience": 0.2 },
+                        { "commandName": "sit", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "lay", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "speak", "commandType": "SIMPLE", "minObedience": 0.0 },
+                        { "commandName": "NEUTRAL", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PROTECTIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "AGGRESSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 },
+                        { "commandName": "PASSIVE", "commandType": "AGGRESSIONLEVEL", "minObedience": 0.0 }
+                    ]
+                },
+        "file": "feverstonehorses:entities/land/camel.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===Camel: TamedAI-Plus AI Tasks (camel taskai index 13, animation: run)===",
+        "op": "addeach",
+        "path": "/server/behaviors/13/aitasks/-",
+        "value": [
+                {
+                    "code": "followmaster",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "followmaster",
+                    "movespeed": 0.035,
+                    "animationSpeed": 1.5,
+                    "maxDistance": 8,
+                    "searchRange": 40,
+                    "animation": "run",
+                    "allowTeleport": true
+                },
+                {
+                    "code": "stay",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "stay",
+                    "movespeed": 0.006,
+                    "maxDistance": 5,
+                    "searchRange": 20,
+                    "animation": "idle"
+                },
+                {
+                    "code": "guard",
+                    "priority": 2,
+                    "priorityForCancel": 1.9,
+                    "command": "guard",
+                    "movespeed": 0.005,
+                    "maxdistance": 50,
+                    "searchRange": 40,
+                    "animation": "Walk",
+                    "animationSpeed": 1.25
+                },
+                {
+                    "code": "petmeleeattack",
+                    "priority": 2,
+                    "entityCodes": [ "wolf-*", "hyena-*", "bear-*", "drifter-*", "hostile-player" ],
+                    "movespeed": 0.04,
+                    "animation": "run",
+                    "animationSpeed": 1.5,
+                    "searchRange": 25,
+                    "isCommandable": true
+                },
+                {
+                    "code": "petflee",
+                    "priority": 4,
+                    "movespeed": 0.05,
+                    "animation": "run",
+                    "animationSpeed": 2.5,
+                    "fleerange": 25,
+                    "fleeseconds": 4
+                },
+                {
+                    "code": "avoidfire",
+                    "priority": 3,
+                    "movespeed": 0.04,
+                    "searchRange": 8,
+                    "animation": "run"
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "sit",
+                    "animation": "idle",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "lay",
+                    "animation": "idle",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "simplecommand",
+                    "priority": 1.5,
+                    "command": "speak",
+                    "animation": "idle",
+                    "minObedience": 0.0
+                },
+                {
+                    "code": "happydance",
+                    "priority": 0.5,
+                    "animation": "idle",
+                    "animationSpeed": 2.0
+                }
+            ],
+        "file": "feverstonehorses:entities/land/camel.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "__comment": "===Camel: Remove pettable (index 14) and add pettableextended===",
+        "op": "remove",
+        "path": "/server/behaviors/14",
+        "file": "feverstonehorses:entities/land/camel.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    },
+    {
+        "op": "add",
+        "path": "/server/behaviors/-",
+        "value": { "code": "pettableextended" },
+        "file": "feverstonehorses:entities/land/camel.json",
+        "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
+    }
+]
