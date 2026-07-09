@@ -122,6 +122,7 @@
         }
     },
     "client": {
+        "shape": { "base": "entity/land/camel" },
         "behaviors": [
             { "code": "repulseagents" },
             { "code": "controlledphysics" },
