@@ -5,8 +5,6 @@ on:
     branches:
       - main
       - feature/**
-    tags:
-      - 'v*'
 
 permissions:
   contents: write
@@ -26,27 +24,38 @@ jobs:
           name: TamedMountables-Plus
           path: bin/TamedMountables-Plus.zip
 
-  release:
-    if: github.ref_type == 'tag'
+  tag-and-release:
+    if: github.ref_name == 'main'
     needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: TamedMountables-Plus
 
-      - name: Get version from tag
+      - name: Read version from modinfo
         id: version
-        run: echo "tag=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
+        run: |
+          version=$(grep -o '"version": *"[^"]*"' resources/modinfo.json | grep -oP '[\d.]+')
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "tag=v$version" >> $GITHUB_OUTPUT
+
+      - name: Create Git Tag
+        run: |
+          git tag "${{ steps.version.outputs.tag }}"
+          git push origin "${{ steps.version.outputs.tag }}"
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           name: Tamed Mountables Plus ${{ steps.version.outputs.tag }}
+          tag_name: ${{ steps.version.outputs.tag }}
           files: TamedMountables-Plus.zip
           fail_on_unmatched_files: true
