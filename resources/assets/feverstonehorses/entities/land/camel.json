@@ -122,7 +122,13 @@
         }
     },
     "client": {
-        "shape": { "base": "entity/land/camel" },
+        "renderer": "Shape",
+        "shapeByType": {
+            "*": { "base": "entity/land/camel" }
+        },
+        "texturesByType": {
+            "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
+        },
         "behaviors": [
             { "code": "repulseagents" },
             { "code": "controlledphysics" },
