@@ -1,0 +1,469 @@
+{
+    "code": "camel",
+    "class": "EntityAgent",
+    "variantgroups": [
+        { "code": "tamed", "states": ["wild", "tamed"] },
+        { "code": "gender", "states": ["male", "female"] }
+    ],
+    "tagsByType": {
+        "*-tamed-*": [ "animal", "huntable", "habitat-land", "tamed" ],
+        "*": [ "animal", "huntable", "habitat-land", "adult" ]
+    },
+    "weight": 600,
+    "hitBoxSize": { "x": 1.5, "y": 2.4 },
+    "deadHitBoxSize": { "x": 1.5, "y": 0.9 },
+    "eyeHeight": 1.9,
+    "knockbackResistance": 0.3,
+    "health": 30,
+    "maxhealth": 30,
+    "fallDamage": false,
+    "drops": [],
+    "attributes": {
+        "tamedByType": {
+            "*-tamed-*": true,
+            "*": false
+        },
+        "creatureDiet": {
+            "foodCategories": [ "Grain", "Fruit" ],
+            "weightedFoodTags": [
+                { "weight": 0.1, "code": "grass" },
+                { "weight": 0.25, "code": "nibbleCrop" },
+                { "weight": 0.3, "code": "cabbage"},
+                { "weight": 0.35, "code": "turnip"},
+                { "weight": 0.45, "code": "carrot"},
+                { "weight": 0.85, "code": "tamingfeedbundle"},
+                { "weight": 1, "code": "redapple"},
+                { "weight": 1, "code": "yellowapple"},
+                { "weight": 1, "code": "pinkapple"}
+            ],
+            "skipFoodTags": [ "rice", "amaranth", "sunflower" ]
+        },
+        "trappable": {
+            "large": { "trapChance": 0.0, "trapDestroyChance": 0.45 }
+        },
+        "handbook": {
+            "groupcode": "feverstonehorses:creaturegroup-fscamel"
+        }
+    },
+    "behaviorConfigs": {
+        "controlledphysics": {
+            "stepHeight": 1.1,
+            "stepUpSpeed": 0.1
+        },
+        "floatupwhenstuck": { "onlyWhenDead": true },
+        "selectionboxes": {
+            "selectionBoxes": ["MidUpperAP"]
+        },
+        "rideableaccessories": {
+            "wearableSlots": [
+                { "code": "middlebackupper", "forCategoryCodes": ["saddle-{type}"], "attachmentPointCode": "MidUpperAP" }
+            ]
+        },
+        "gait": {
+            "enabledByType": { "*-tamed-*": true, "*": false },
+            "idleGaits": { "Land": "idle" },
+            "gaits": [
+                {
+                    "code": "walkback",
+                    "movespeed": 0.011,
+                    "backwards": true,
+                    "animation": "Walk",
+                    "animationSpeed": 1.4
+                },
+                {
+                    "code": "idle",
+                    "animation": "Idle",
+                    "weight": 1
+                },
+                {
+                    "code": "walk",
+                    "animation": "Walk",
+                    "yawMultiplier": 1.2,
+                    "movespeed": 0.018
+                },
+                {
+                    "code": "trot",
+                    "movespeed": 0.018,
+                    "yawMultiplier": 1.2,
+                    "animation": "Walk",
+                    "animationSpeed": 1.0
+                },
+                {
+                    "code": "trot",
+                    "movespeed": 0.03,
+                    "yawMultiplier": 0.9,
+                    "fallbackGaitCode": "walk",
+                    "animation": "Run",
+                    "animationSpeed": 1.25
+                },
+                {
+                    "code": "sprint",
+                    "movespeed": 0.07,
+                    "yawMultiplier": 0.8,
+                    "fallbackGaitCode": "trot",
+                    "animation": "Run",
+                    "animationSpeed": 1.5
+                },
+                {
+                    "code": "jump",
+                    "movespeed": 0.07,
+                    "yawMultiplier": 1,
+                    "fallbackGaitCode": "walk",
+                    "animation": "Run",
+                    "animationSpeed": 1.5
+                }
+            ]
+        },
+        "rideable": {
+            "enabledByType": { "*-tamed-*": true, "*": false },
+            "interactMountAnySeat": false,
+            "seats": [
+                { "controllable": true,
+                    "riderOffset": { "x": 0, "y": -0.6, "z": 0 }
+                }
+            ],
+            "rideableGaitOrder": {
+                "Land": ["walkback", "idle", "walk", "sprint"]
+            },
+            "controls": {
+                "walkback": {
+                    "riderAnim": {
+                        "animation": "rideelk-walk",
+                        "animationSpeed": 1,
+                        "weight": 1,
+                        "withFpVariant": true,
+                        "blendMode": "Average",
+                        "elementWeight": {
+                            "LowerTorso": 80,
+                            "UpperTorso": 80,
+                            "UpperFootR": 80,
+                            "UpperFootL": 80,
+                            "LowerFootR": 80,
+                            "LowerFootL": 80
+                        },
+                        "elementBlendMode": {
+                            "LowerTorso": "Average",
+                            "UpperTorso": "Average",
+                            "UpperFootR": "Average",
+                            "UpperFootL": "Average",
+                            "LowerFootR": "Average",
+                            "LowerFootL": "Average"
+                        }
+                    }
+                },
+                "idle": {
+                    "riderAnim": {
+                        "animation": "rideelk-idle",
+                        "animationSpeed": 1,
+                        "weight": 1,
+                        "withFpVariant": true,
+                        "blendMode": "Average",
+                        "elementWeight": {
+                            "LowerTorso": 80,
+                            "UpperTorso": 80,
+                            "UpperFootR": 80,
+                            "UpperFootL": 80,
+                            "LowerFootR": 80,
+                            "LowerFootL": 80
+                        },
+                        "elementBlendMode": {
+                            "LowerTorso": "Average",
+                            "UpperTorso": "Average",
+                            "UpperFootR": "Average",
+                            "UpperFootL": "Average",
+                            "LowerFootR": "Average",
+                            "LowerFootL": "Average"
+                        }
+                    }
+                },
+                "walk": {
+                    "riderAnim": {
+                        "animation": "rideelk-walk",
+                        "animationSpeed": 1,
+                        "weight": 1,
+                        "withFpVariant": true,
+                        "blendMode": "Average",
+                        "elementWeight": {
+                            "LowerTorso": 80,
+                            "UpperTorso": 80,
+                            "UpperFootR": 80,
+                            "UpperFootL": 80,
+                            "LowerFootR": 80,
+                            "LowerFootL": 80
+                        },
+                        "elementBlendMode": {
+                            "LowerTorso": "Average",
+                            "UpperTorso": "Average",
+                            "UpperFootR": "Average",
+                            "UpperFootL": "Average",
+                            "LowerFootR": "Average",
+                            "LowerFootL": "Average"
+                        }
+                    }
+                },
+                "sprint": {
+                    "riderAnim": {
+                        "animation": "rideelk-run",
+                        "animationSpeed": 1.8,
+                        "weight": 1,
+                        "withFpVariant": true,
+                        "blendMode": "Average",
+                        "elementWeight": {
+                            "LowerTorso": 80,
+                            "UpperTorso": 80,
+                            "UpperFootR": 80,
+                            "UpperFootL": 80,
+                            "LowerFootR": 80,
+                            "LowerFootL": 80
+                        },
+                        "elementBlendMode": {
+                            "LowerTorso": "Average",
+                            "UpperTorso": "Average",
+                            "UpperFootR": "Average",
+                            "UpperFootL": "Average",
+                            "LowerFootR": "Average",
+                            "LowerFootL": "Average"
+                        }
+                    },
+                    "passengerAnim": {
+                        "animation": "rideelk-run-passenger",
+                        "animationSpeed": 1.2,
+                        "weight": 1,
+                        "withFpVariant": true,
+                        "blendMode": "Average",
+                        "elementWeight": {
+                            "LowerTorso": 80,
+                            "UpperTorso": 80,
+                            "UpperFootR": 80,
+                            "UpperFootL": 80,
+                            "LowerFootR": 80,
+                            "LowerFootL": 80
+                        },
+                        "elementBlendMode": {
+                            "LowerTorso": "Average",
+                            "UpperTorso": "Average",
+                            "UpperFootR": "Average",
+                            "UpperFootL": "Average",
+                            "LowerFootR": "Average",
+                            "LowerFootL": "Average"
+                        }
+                    }
+                },
+                "jump": {
+                    "riderAnim": {
+                        "animation": "rideelk-jump",
+                        "animationSpeed": 1,
+                        "weight": 10,
+                        "withFpVariant": true,
+                        "blendMode": "Average",
+                        "elementWeight": {
+                            "LowerTorso": 160,
+                            "UpperTorso": 160,
+                            "UpperFootR": 160,
+                            "UpperFootL": 160,
+                            "LowerFootR": 160,
+                            "LowerFootL": 160
+                        },
+                        "elementBlendMode": {
+                            "LowerTorso": "Average",
+                            "UpperTorso": "Average",
+                            "UpperFootR": "Average",
+                            "UpperFootL": "Average",
+                            "LowerFootR": "Average",
+                            "LowerFootL": "Average"
+                        }
+                    },
+                    "passengerAnim": null
+                }
+            }
+        }
+    },
+    "client": {
+        "renderer": "Shape",
+        "shapeByType": {
+            "*": { "base": "entity/land/camel" }
+        },
+        "texturesByType": {
+            "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
+        },
+        "animations": [
+                {
+                "code": "idle",
+                "animation": "Idle",
+                "blendMode": "AddAverage",
+                "easeOutSpeed": 4,
+                "triggeredBy": { "defaultAnim": true }
+            },
+            {
+                "code": "walk",
+                "animation": "Walk",
+                "animationSpeed": 1.0
+            },
+            {
+                "code": "run",
+                "animation": "Run",
+                "animationSpeed": 1.0
+            }
+        ],
+        "behaviors": [
+            { "code": "repulseagents" },
+            { "code": "controlledphysics" },
+            { "code": "mortallywoundable" },
+            { "code": "health" },
+            { "code": "harvestable" },
+            { "code": "interpolateposition" },
+            { "code": "floatupwhenstuck" },
+            { "code": "gait" },
+            { "code": "rideable" },
+            { "code": "ropetieable" }
+        ]
+    },
+    "server": {
+        "behaviors": [
+            { "code": "gait",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "rideable",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "mouthinventory",
+                "acceptStacks": [
+                    { "type": "item", "code": "vegetable-carrot" },
+                    { "type": "item", "code": "vegetable-cabbage" },
+                    { "type": "item", "code": "vegetable-turnip" },
+                    { "type": "item", "code": "feverstonehorses:carrotbundle" },
+                    { "type": "item", "code": "feverstonehorses:drygrassbundle" },
+                    { "type": "item", "code": "drygrass" },
+                    { "type": "item", "code": "fruit-pinkapple" },
+                    { "type": "item", "code": "fruit-redapple" },
+                    { "type": "item", "code": "fruit-yellowapple" },
+                    { "type": "item", "code": "grain-flax" },
+                    { "type": "item", "code": "grain-rye" },
+                    { "type": "item", "code": "grain-spelt" }
+                ]
+            },
+            { "code": "repulseagents" },
+            { "code": "controlledphysics" },
+            { "code": "mortallywoundable",
+                "enabledByType": { "*-tamed-*": true, "*": false },
+                "whenBelowHealth": 7 },
+            { "code": "despawn",
+                "enabledByType": { "*-wild-*": true, "*": false },
+                "minPlayerDistance": 28, "belowLightLevel": 8, "minSeconds": 600 },
+            { "code": "deaddecay", "hoursToDecay": 96, "decayedBlock": "carcass-large" },
+            { "code": "floatupwhenstuck" },
+            { "code": "health" },
+            { "code": "harvestable",
+                "drops": [
+                    { "type": "item", "code": "redmeat-raw",
+                        "quantity": { "avg": 14, "var": 3 }
+                    },
+                    { "type": "item", "code": "hide-raw-large",
+                        "quantity": { "avg": 2, "var": 0.5 }
+                    },
+                    { "type": "item", "code": "fat",
+                        "quantity": { "avg": 3, "var": 1 }
+                    }
+                ]
+            },
+            { "code": "breathe" },
+            { "code": "emotionstates",
+                "states": [
+                    {
+                        "code": "aggressiveondamage",
+                        "duration": 30,
+                        "chance": 0.10,
+                        "slot": 0,
+                        "priority": 2,
+                        "whenHealthRelBelow": 0.4
+                    },
+                    {
+                        "code": "fleeondamage",
+                        "duration": 30,
+                        "chance": 1,
+                        "slot": 0,
+                        "priority": 1,
+                        "accumType": "max"
+                    },
+                    {
+                        "code": "saturated",
+                        "duration": 600,
+                        "chance": 0.4,
+                        "slot": 0,
+                        "priority": 1,
+                        "accumType": "sum"
+                    },
+                    {
+                        "code": "alarmherdondamage",
+                        "chance": 1,
+                        "slot": 1,
+                        "priority": 1,
+                        "accumType": "max"
+                    }
+                ]
+            },
+            {
+                "code": "taskai",
+                "aiCreatureType": "LandCreature",
+                "aitasks": [
+                    {
+                        "code": "fleeentity",
+                        "entityCodes": [ "player", "wolf-*", "bear-*", "hyena-*" ],
+                        "priority": 1.8,
+                        "movespeed": 0.04,
+                        "seekingRange": 18,
+                        "animation": "run",
+                        "animationSpeed": 1.5
+                    },
+                    {
+                        "code": "useinventory",
+                        "priority": 1.5,
+                        "movespeed": 0.01
+                    },
+                    {
+                        "code": "followleadholder",
+                        "priority": 1.45,
+                        "movespeed": 0.035,
+                        "animation": "walk",
+                        "animationSpeed": 1.0
+                    },
+                    {
+                        "code": "getoutofwater",
+                        "priority": 1.4,
+                        "movespeed": 0.02
+                    },
+                    {
+                        "code": "seekfoodandeat",
+                        "priority": 1.15,
+                        "movespeed": 0.01,
+                        "eatSound": "game:creature/hooved/eat"
+                    },
+                    {
+                        "code": "wander",
+                        "priority": 1.0,
+                        "priorityForCancel": 1.35,
+                        "movespeed": 0.012,
+                        "gliding": false,
+                        "maxHeightVariance": 10,
+                        "animation": "walk",
+                        "animationSpeed": 1.0
+                    },
+                    {
+                        "code": "idle",
+                        "priority": 0.9,
+                        "minDuration": 3000,
+                        "maxDuration": 8000,
+                        "mincooldown": 6000,
+                        "maxcooldown": 60000
+                    },
+                    {
+                        "code": "lookaround",
+                        "priority": 0.5
+                    }
+                ]
+            },
+            { "code": "pettable" },
+            { "code": "ownable", "groupCode": "mountableanimal" },
+            { "code": "ropetieable" },
+            { "code": "entitystatetags" }
+        ]
+    }
+}

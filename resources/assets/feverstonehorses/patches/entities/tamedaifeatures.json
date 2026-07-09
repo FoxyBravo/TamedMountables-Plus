@@ -1,0 +1,49 @@
+[
+    {
+        "__comment": "===AI task: petmeleeattack for taminghorse (so it can defend itself during taming)===",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/-",
+        "value": {
+            "code": "petmeleeattack",
+            "priority": 2,
+            "entityCodes": [ "wolf-*", "hyena-*", "bear-*" ],
+            "movespeed": 0.045,
+            "animation": "Gallop",
+            "animationSpeed": 2.2,
+            "searchRange": 25,
+            "isCommandable": true
+        },
+        "file": "feverstonehorses:entities/land/taminghorse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" } ]
+    },
+    {
+        "__comment": "===AI task: petflee for taminghorse (flee from threats when health low)===",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/-",
+        "value": {
+            "code": "petflee",
+            "priority": 4,
+            "movespeed": 0.05,
+            "animation": "Run",
+            "animationSpeed": 2.5,
+            "fleerange": 25,
+            "fleeseconds": 4
+        },
+        "file": "feverstonehorses:entities/land/taminghorse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" } ]
+    },
+    {
+        "__comment": "===AI task: avoidfire for taminghorse===",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/-",
+        "value": {
+            "code": "avoidfire",
+            "priority": 3,
+            "movespeed": 0.04,
+            "searchRange": 8,
+            "animation": "Run"
+        },
+        "file": "feverstonehorses:entities/land/taminghorse.json",
+        "dependsOn": [ { "modid": "tamedaiplus" } ]
+    }
+]

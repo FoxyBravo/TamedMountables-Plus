@@ -9,6 +9,6 @@
             }
         ],
         "file": "game:itemtypes/food/grain.json",
-        "dependsOn": [ { "modid": "petai" } ]
+        "dependsOn": [ { "modid": "tamedaiplus" } ]
     }
 ]
