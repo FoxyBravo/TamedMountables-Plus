@@ -5,6 +5,7 @@
         { "code": "tamed", "states": ["wild", "tamed"] },
         { "code": "gender", "states": ["male", "female"] }
     ],
+    "skipVariants": ["camel-tamed-male", "camel-tamed-female"],
     "tagsByType": {
         "*-tamed-*": [ "animal", "huntable", "habitat-land", "tamed" ],
         "*": [ "animal", "huntable", "habitat-land", "adult" ]

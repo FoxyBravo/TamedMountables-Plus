@@ -1,5 +1,5 @@
 {
-    "code": "camel-tamed",
+    "code": "tamedcamel",
     "class": "EntityAgent",
     "variantgroups": [
         { "code": "gender", "states": ["male", "female"] }
