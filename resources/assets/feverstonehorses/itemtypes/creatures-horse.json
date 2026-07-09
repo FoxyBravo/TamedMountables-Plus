@@ -17,7 +17,7 @@
 			"horse-tamed-male-quarter", "horse-tamed-female-quarter",
 			"foal-wild-percheron", "foal-wild-arabian", "foal-wild-donkey", "foal-wild-shire", "foal-wild-quarter",
 			"foal-tamed-percheron", "foal-tamed-arabian", "foal-tamed-donkey", "foal-tamed-shire", "foal-tamed-quarter",
-			"camel-wild-male", "camel-wild-female", "camel-tamed-male", "camel-tamed-female"]	
+			"camel-male-wild", "camel-female-wild", "camel-male-tamed", "camel-female-tamed"]	
 		}
 	],
 	"shapeByType": {

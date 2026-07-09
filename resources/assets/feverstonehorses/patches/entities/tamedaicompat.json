@@ -425,7 +425,7 @@
             { "code": "tameable",
                 "disobediencePerDay": 0.01,
                 "size": "large",
-                "tameEntityCode": "feverstonehorses:camel-tamed-{gender}",
+                "tameEntityCode": "feverstonehorses:camel-{gender}-tamed",
                 "treat": [
                     { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
                     { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
