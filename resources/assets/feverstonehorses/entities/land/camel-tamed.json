@@ -1,0 +1,153 @@
+{
+    "code": "camel-tamed",
+    "class": "EntityAgent",
+    "variantgroups": [
+        { "code": "gender", "states": ["male", "female"] }
+    ],
+    "tagsByType": {
+        "*": [ "animal", "huntable", "habitat-land", "tamed" ]
+    },
+    "weight": 600,
+    "hitBoxSize": { "x": 1.5, "y": 2.4 },
+    "deadHitBoxSize": { "x": 1.5, "y": 0.9 },
+    "eyeHeight": 1.9,
+    "knockbackResistance": 0.3,
+    "health": 30,
+    "maxhealth": 30,
+    "fallDamage": false,
+    "drops": [],
+    "attributes": {
+        "creatureDiet": {
+            "foodCategories": [ "Grain", "Fruit" ],
+            "weightedFoodTags": [
+                { "weight": 0.1, "code": "grass" },
+                { "weight": 0.25, "code": "nibbleCrop" },
+                { "weight": 0.3, "code": "cabbage"},
+                { "weight": 0.35, "code": "turnip"},
+                { "weight": 0.45, "code": "carrot"},
+                { "weight": 0.85, "code": "tamingfeedbundle"},
+                { "weight": 1, "code": "redapple"},
+                { "weight": 1, "code": "yellowapple"},
+                { "weight": 1, "code": "pinkapple"}
+            ],
+            "skipFoodTags": [ "rice", "amaranth", "sunflower" ]
+        },
+        "handbook": {
+            "groupcode": "feverstonehorses:creaturegroup-fscamel"
+        }
+    },
+    "behaviorConfigs": {
+        "controlledphysics": {
+            "stepHeight": 1.1,
+            "stepUpSpeed": 0.1
+        },
+        "floatupwhenstuck": { "onlyWhenDead": true },
+        "selectionboxes": {
+            "selectionBoxes": ["MidUpperAP"]
+        },
+        "rideableaccessories": {
+            "wearableSlots": [
+                { "code": "middlebackupper", "forCategoryCodes": ["saddle-{type}"], "attachmentPointCode": "MidUpperAP" }
+            ]
+        },
+        "gait": {
+            "idleGaits": { "Land": "idle" },
+            "gaits": [
+                { "code": "walkback", "movespeed": 0.011, "backwards": true, "animation": "walk", "animationSpeed": 1.4 },
+                { "code": "idle", "animation": "idle", "weight": 1 },
+                { "code": "walk", "movespeed": 0.018, "yawMultiplier": 1.2, "animation": "walk", "animationSpeed": 1.0 },
+                { "code": "trot", "movespeed": 0.03, "yawMultiplier": 0.9, "fallbackGaitCode": "walk", "animation": "run", "animationSpeed": 1.25 },
+                { "code": "sprint", "movespeed": 0.07, "yawMultiplier": 0.8, "fallbackGaitCode": "trot", "animation": "run", "animationSpeed": 1.5 },
+                { "code": "jump", "movespeed": 0.07, "yawMultiplier": 1, "fallbackGaitCode": "walk", "animation": "run", "animationSpeed": 1.5 }
+            ]
+        },
+        "rideable": {
+            "interactMountAnySeat": false,
+            "seats": [
+                { "controllable": true, "riderOffset": { "x": 0, "y": -0.6, "z": 0 } }
+            ],
+            "rideableGaitOrder": {
+                "Land": ["walkback", "idle", "walk", "sprint"]
+            }
+        }
+    },
+    "client": {
+        "renderer": "Shape",
+        "shapeByType": {
+            "*": { "base": "entity/land/camel" }
+        },
+        "texturesByType": {
+            "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
+        },
+        "behaviors": [
+            { "code": "repulseagents" },
+            { "code": "controlledphysics" },
+            { "code": "health" },
+            { "code": "interpolateposition" },
+            { "code": "floatupwhenstuck" },
+            { "code": "gait" },
+            { "code": "rideable" },
+            { "code": "ropetieable" }
+        ]
+    },
+    "server": {
+        "behaviors": [
+            { "code": "gait" },
+            { "code": "rideable" },
+            { "code": "mouthinventory",
+                "acceptStacks": [
+                    { "type": "item", "code": "vegetable-carrot" },
+                    { "type": "item", "code": "vegetable-cabbage" },
+                    { "type": "item", "code": "vegetable-turnip" },
+                    { "type": "item", "code": "feverstonehorses:carrotbundle" },
+                    { "type": "item", "code": "feverstonehorses:drygrassbundle" },
+                    { "type": "item", "code": "drygrass" },
+                    { "type": "item", "code": "fruit-pinkapple" },
+                    { "type": "item", "code": "fruit-redapple" },
+                    { "type": "item", "code": "fruit-yellowapple" },
+                    { "type": "item", "code": "grain-flax" },
+                    { "type": "item", "code": "grain-rye" },
+                    { "type": "item", "code": "grain-spelt" }
+                ]
+            },
+            { "code": "repulseagents" },
+            { "code": "controlledphysics" },
+            { "code": "deaddecay", "hoursToDecay": 96, "decayedBlock": "carcass-large" },
+            { "code": "floatupwhenstuck" },
+            { "code": "health" },
+            { "code": "harvestable",
+                "drops": [
+                    { "type": "item", "code": "redmeat-raw", "quantity": { "avg": 14, "var": 3 } },
+                    { "type": "item", "code": "hide-raw-large", "quantity": { "avg": 2, "var": 0.5 } },
+                    { "type": "item", "code": "fat", "quantity": { "avg": 3, "var": 1 } }
+                ]
+            },
+            { "code": "breathe" },
+            { "code": "emotionstates",
+                "states": [
+                    { "code": "aggressiveondamage", "duration": 30, "chance": 0.10, "slot": 0, "priority": 2, "whenHealthRelBelow": 0.4 },
+                    { "code": "fleeondamage", "duration": 30, "chance": 1, "slot": 0, "priority": 1, "accumType": "max" },
+                    { "code": "saturated", "duration": 600, "chance": 0.4, "slot": 0, "priority": 1, "accumType": "sum" },
+                    { "code": "alarmherdondamage", "chance": 1, "slot": 1, "priority": 1, "accumType": "max" }
+                ]
+            },
+            {
+                "code": "taskai",
+                "aiCreatureType": "LandCreature",
+                "aitasks": [
+                    { "code": "fleeentity", "entityCodes": [ "wolf-*", "bear-*", "hyena-*" ], "priority": 1.8, "movespeed": 0.04, "seekingRange": 18 },
+                    { "code": "useinventory", "priority": 1.5, "movespeed": 0.01 },
+                    { "code": "followleadholder", "priority": 1.45, "movespeed": 0.035 },
+                    { "code": "getoutofwater", "priority": 1.4, "movespeed": 0.02 },
+                    { "code": "idle", "priority": 1.2, "minDuration": 5000, "maxDuration": 10000 },
+                    { "code": "seekfoodandeat", "priority": 1.15, "movespeed": 0.01, "eatSound": "game:creature/hooved/eat" },
+                    { "code": "wander", "priority": 1.0, "movespeed": 0.012, "gliding": false, "maxHeightVariance": 10 },
+                    { "code": "lookaround", "priority": 0.5 }
+                ]
+            },
+            { "code": "ownable", "groupCode": "mountableanimal" },
+            { "code": "ropetieable" },
+            { "code": "entitystatetags" }
+        ]
+    }
+}

@@ -2,11 +2,11 @@
     "code": "camel",
     "class": "EntityAgent",
     "variantgroups": [
-        { "code": "gender", "states": ["male", "female"] },
-        { "code": "tamed", "states": ["wild", "tamed"] }
+        { "code": "tamed", "states": ["wild", "tamed"] },
+        { "code": "gender", "states": ["male", "female"] }
     ],
     "tagsByType": {
-        "*-tamed": [ "animal", "huntable", "habitat-land", "tamed" ],
+        "*-tamed-*": [ "animal", "huntable", "habitat-land", "tamed" ],
         "*": [ "animal", "huntable", "habitat-land", "adult" ]
     },
     "weight": 600,
@@ -20,7 +20,7 @@
     "drops": [],
     "attributes": {
         "tamedByType": {
-            "*-tamed": true,
+            "*-tamed-*": true,
             "*": false
         },
         "creatureDiet": {
@@ -60,7 +60,7 @@
             ]
         },
         "gait": {
-            "enabledByType": { "*-tamed": true, "*": false },
+            "enabledByType": { "*-tamed-*": true, "*": false },
             "idleGaits": { "Land": "idle" },
             "gaits": [
                 {
@@ -109,7 +109,7 @@
             ]
         },
         "rideable": {
-            "enabledByType": { "*-tamed": true, "*": false },
+            "enabledByType": { "*-tamed-*": true, "*": false },
             "interactMountAnySeat": false,
             "seats": [
                 { "controllable": true,
@@ -124,16 +124,10 @@
     "client": {
         "renderer": "Shape",
         "shapeByType": {
-            "*-male-wild": { "base": "entity/land/camel" },
-            "*-female-wild": { "base": "entity/land/camel" },
-            "*-male-tamed": { "base": "entity/land/camel" },
-            "*-female-tamed": { "base": "entity/land/camel" }
+            "*": { "base": "entity/land/camel" }
         },
         "texturesByType": {
-            "*-male-wild": { "Camel1.png": { "base": "entity/land/camel/Camel1" } },
-            "*-female-wild": { "Camel1.png": { "base": "entity/land/camel/Camel1" } },
-            "*-male-tamed": { "Camel1.png": { "base": "entity/land/camel/Camel1" } },
-            "*-female-tamed": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
+            "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
         },
         "behaviors": [
             { "code": "repulseagents" },
@@ -151,9 +145,9 @@
     "server": {
         "behaviors": [
             { "code": "gait",
-                "enabledByType": { "*-tamed": true, "*": false } },
+                "enabledByType": { "*-tamed-*": true, "*": false } },
             { "code": "rideable",
-                "enabledByType": { "*-tamed": true, "*": false } },
+                "enabledByType": { "*-tamed-*": true, "*": false } },
             { "code": "mouthinventory",
                 "acceptStacks": [
                     { "type": "item", "code": "vegetable-carrot" },
@@ -173,10 +167,10 @@
             { "code": "repulseagents" },
             { "code": "controlledphysics" },
             { "code": "mortallywoundable",
-                "enabledByType": { "*-tamed": true, "*": false },
+                "enabledByType": { "*-tamed-*": true, "*": false },
                 "whenBelowHealth": 7 },
             { "code": "despawn",
-                "enabledByType": { "*-wild": true, "*": false },
+                "enabledByType": { "*-wild-*": true, "*": false },
                 "minPlayerDistance": 28, "belowLightLevel": 8, "minSeconds": 600 },
             { "code": "deaddecay", "hoursToDecay": 96, "decayedBlock": "carcass-large" },
             { "code": "floatupwhenstuck" },
