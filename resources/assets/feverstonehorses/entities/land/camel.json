@@ -124,10 +124,16 @@
     "client": {
         "renderer": "Shape",
         "shapeByType": {
-            "*": { "base": "entity/land/camel" }
+            "*-wild-male": { "base": "entity/land/camel" },
+            "*-wild-female": { "base": "entity/land/camel" },
+            "*-tamed-male": { "base": "entity/land/camel" },
+            "*-tamed-female": { "base": "entity/land/camel" }
         },
         "texturesByType": {
-            "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
+            "*-wild-male": { "Camel1.png": { "base": "entity/land/camel/Camel1" } },
+            "*-wild-female": { "Camel1.png": { "base": "entity/land/camel/Camel1" } },
+            "*-tamed-male": { "Camel1.png": { "base": "entity/land/camel/Camel1" } },
+            "*-tamed-female": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
         },
         "behaviors": [
             { "code": "repulseagents" },
