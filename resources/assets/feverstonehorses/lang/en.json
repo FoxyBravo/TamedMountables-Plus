@@ -209,6 +209,24 @@
 	"game:deathmsg-horsefemale*-2": "Player {0} was kicked to death.",
 
 	"creaturegroup-fshorse": "Horses",
+
+	"creaturegroup-fscamel": "Camels",
+
+	"item-creature-camel-wild-male": "Wild Male Camel",
+	"item-dead-creature-camel-wild-male": "Dead Camel",
+	"itemdesc-creature-camel-wild-male": "A hardy desert dweller.",
+
+	"item-creature-camel-wild-female": "Wild Female Camel",
+	"item-dead-creature-camel-wild-female": "Dead Camel",
+	"itemdesc-creature-camel-wild-female": "A hardy desert dweller.",
+
+	"item-creature-camel-tamed-male": "Tamed Male Camel",
+	"item-dead-creature-camel-tamed-male": "Dead Camel",
+	"itemdesc-creature-camel-tamed-male": "A reliable desert mount.",
+
+	"item-creature-camel-tamed-female": "Tamed Female Camel",
+	"item-dead-creature-camel-tamed-female": "Dead Camel",
+	"itemdesc-creature-camel-tamed-female": "A reliable desert mount.",
  
 	"deadcreature-horsetrampled": "Appears to be trampled by a horse."
 }

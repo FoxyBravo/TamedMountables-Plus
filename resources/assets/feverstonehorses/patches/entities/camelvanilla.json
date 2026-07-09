@@ -1,0 +1,118 @@
+[
+    {
+        "__comment": "===Bears hunt camels===",
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/0/entityCodesByType/*/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/bear.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/3/entityCodesByType/*/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/bear.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "__comment": "===Wolves hunt camels (female)===",
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/10/aitasks/0/entityCodes/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/wolf-female.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/10/aitasks/1/entityCodes/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/wolf-female.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/10/aitasks/2/entityCodes/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/wolf-female.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "__comment": "===Wolves hunt camels (male)===",
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/0/entityCodes/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/wolf-male.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/1/entityCodes/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/wolf-male.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/2/entityCodes/-",
+        "value": "feverstonehorses:camel-*",
+        "file": "game:entities/land/wolf-male.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "__comment": "===For camels specifically (foals), wolves will also hunt===",
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/10/aitasks/0/entityCodes/-",
+        "value": "feverstonehorses:foal-*",
+        "file": "game:entities/land/wolf-female.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/10/aitasks/1/entityCodes/-",
+        "value": "feverstonehorses:foal-*",
+        "file": "game:entities/land/wolf-female.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/10/aitasks/2/entityCodes/-",
+        "value": "feverstonehorses:foal-*",
+        "file": "game:entities/land/wolf-female.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/0/entityCodes/-",
+        "value": "feverstonehorses:foal-*",
+        "file": "game:entities/land/wolf-male.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/1/entityCodes/-",
+        "value": "feverstonehorses:foal-*",
+        "file": "game:entities/land/wolf-male.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    },
+    {
+        "side": "server",
+        "op": "add",
+        "path": "/server/behaviors/9/aitasks/2/entityCodes/-",
+        "value": "feverstonehorses:foal-*",
+        "file": "game:entities/land/wolf-male.json",
+        "condition": { "when": "FSWHorseEnabled", "isValue": "true" }
+    }
+]

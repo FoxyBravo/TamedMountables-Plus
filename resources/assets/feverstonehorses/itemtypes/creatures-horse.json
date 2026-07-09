@@ -16,7 +16,8 @@
 			"horse-wild-male-quarter", "horse-wild-female-quarter",
 			"horse-tamed-male-quarter", "horse-tamed-female-quarter",
 			"foal-wild-percheron", "foal-wild-arabian", "foal-wild-donkey", "foal-wild-shire", "foal-wild-quarter",
-			"foal-tamed-percheron", "foal-tamed-arabian", "foal-tamed-donkey", "foal-tamed-shire", "foal-tamed-quarter"]	
+			"foal-tamed-percheron", "foal-tamed-arabian", "foal-tamed-donkey", "foal-tamed-shire", "foal-tamed-quarter",
+			"camel-wild-male", "camel-wild-female", "camel-tamed-male", "camel-tamed-female"]	
 		}
 	],
 	"shapeByType": {
@@ -49,7 +50,8 @@
 		"*-horse-wild-male-donkey": { "base": "entity/land/horse-donkey" },
 		"*-horse-tamed-male-donkey": { "base": "entity/land/horse-donkey" },
 		"*-horse-wild-female-donkey": { "base": "entity/land/horse-donkey" },
-		"*-horse-tamed-female-donkey": { "base": "entity/land/horse-donkey" }
+		"*-horse-tamed-female-donkey": { "base": "entity/land/horse-donkey" },
+		"*-camel-*": { "base": "entity/land/camel" }
 		},
 	"texturesByType": {
 		"*-foal-wild-percheron": { "skin": { "base": "entity/land/horse/horseskin2" } },
@@ -71,7 +73,8 @@
 		"*-male-quarter": { "skin": { "base": "entity/land/horse/horseskin25" } },
 		"*-female-quarter": { "skin": { "base": "entity/land/horse/horseskin25" } },
 		"*-male-donkey": { "skin": { "base": "entity/land/donkey/donkeyskin2" } },
-		"*-female-donkey": { "skin": { "base": "entity/land/donkey/donkeyskin3" } }
+		"*-female-donkey": { "skin": { "base": "entity/land/donkey/donkeyskin3" } },
+		"*-camel-*": { "textureRemakeVisual.png": { "base": "entity/land/camel/Camel1" } }
 	},
 		
 	"creativeinventory": {
@@ -95,6 +98,13 @@
 			"rotation": { "x": 180, "y": -115, "z": 6 },
 			"origin": { "x": 0.5, "y": 1.25, "z": 0.5 },
 			"scale": 0.4
+		},
+		"creature-camel-*": {
+			"rotate": true,
+			"translation": { "x": 0, "y": 0, "z": 0 },
+			"rotation": { "x": 180, "y": -115, "z": 6 },
+			"origin": { "x": 0.5, "y": 1.25, "z": 0.5 },
+			"scale": 0.55
 		}
 	},
 	"fpHandTransform": {
