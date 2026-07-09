@@ -6,7 +6,6 @@
 	"textureWidth": 256,
 	"textureHeight": 256,
 	"textureSizes": {
-		"Camel1.png": [256, 256]
 	},
 	"textures": {
 		"Camel1.png": "entity/land/camel/Camel1"

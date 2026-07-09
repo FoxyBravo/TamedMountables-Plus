@@ -67,19 +67,25 @@
                     "code": "walkback",
                     "movespeed": 0.011,
                     "backwards": true,
-                    "animation": "walk",
+                    "animation": "Walk",
                     "animationSpeed": 1.4
                 },
                 {
                     "code": "idle",
-                    "animation": "idle",
+                    "animation": "Idle",
                     "weight": 1
                 },
                 {
                     "code": "walk",
+                    "animation": "Walk",
+                    "yawMultiplier": 1.2,
+                    "movespeed": 0.018
+                },
+                {
+                    "code": "trot",
                     "movespeed": 0.018,
                     "yawMultiplier": 1.2,
-                    "animation": "walk",
+                    "animation": "Walk",
                     "animationSpeed": 1.0
                 },
                 {
@@ -87,7 +93,7 @@
                     "movespeed": 0.03,
                     "yawMultiplier": 0.9,
                     "fallbackGaitCode": "walk",
-                    "animation": "run",
+                    "animation": "Run",
                     "animationSpeed": 1.25
                 },
                 {
@@ -95,7 +101,7 @@
                     "movespeed": 0.07,
                     "yawMultiplier": 0.8,
                     "fallbackGaitCode": "trot",
-                    "animation": "run",
+                    "animation": "Run",
                     "animationSpeed": 1.5
                 },
                 {
@@ -103,7 +109,7 @@
                     "movespeed": 0.07,
                     "yawMultiplier": 1,
                     "fallbackGaitCode": "walk",
-                    "animation": "run",
+                    "animation": "Run",
                     "animationSpeed": 1.5
                 }
             ]
