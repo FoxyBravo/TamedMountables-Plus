@@ -30,6 +30,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           version="$(jq -r '.version' resources/modinfo.json)"
-          gh release create "v$version" "bin/TamedMountables-Plus.zip" \
-            --title "Tamed Mountables Plus v$version" \
+          tag="v$version"
+          gh release delete "$tag" --yes 2>/dev/null || true
+          git push --delete origin "$tag" 2>/dev/null || true
+          gh release create "$tag" "bin/TamedMountables-Plus.zip" \
+            --title "Tamed Mountables Plus $tag" \
             --generate-notes
