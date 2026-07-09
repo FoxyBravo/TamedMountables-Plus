@@ -74,7 +74,7 @@
 		"*-female-quarter": { "skin": { "base": "entity/land/horse/horseskin25" } },
 		"*-male-donkey": { "skin": { "base": "entity/land/donkey/donkeyskin2" } },
 		"*-female-donkey": { "skin": { "base": "entity/land/donkey/donkeyskin3" } },
-		"*-camel-*": { "textureRemakeVisual.png": { "base": "entity/land/camel/Camel1" } }
+		"*-camel-*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
 	},
 		
 	"creativeinventory": {
