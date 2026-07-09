@@ -48,7 +48,7 @@ jobs:
 
       - name: Create Git Tag
         run: |
-          git tag "${{ steps.version.outputs.tag }}"
+          git tag --force "${{ steps.version.outputs.tag }}"
           git push origin "${{ steps.version.outputs.tag }}"
 
       - name: Create Release
