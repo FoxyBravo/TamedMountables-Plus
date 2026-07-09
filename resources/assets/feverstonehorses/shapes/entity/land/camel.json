@@ -1,11 +1,7 @@
 {
 	"editor": {
-		"backDropShape": "",
-		"collapsedPaths": "",
-		"allAngles": false,
-		"entityTextureMode": false,
-		"singleTexture": false,
-		"vsFormatConverted": true
+		"allAngles": true,
+		"entityTextureMode": false
 	},
 	"textureWidth": 256,
 	"textureHeight": 256,
