@@ -5,7 +5,7 @@
 		"allAngles": false,
 		"entityTextureMode": false,
 		"singleTexture": false,
-		"vsFormatConverted": false
+		"vsFormatConverted": true
 	},
 	"textureWidth": 256,
 	"textureHeight": 256,
