@@ -13,6 +13,9 @@
     "hitBoxSize": { "x": 1.5, "y": 2.4 },
     "deadHitBoxSize": { "x": 1.5, "y": 0.9 },
     "eyeHeight": 1.9,
+    "knockbackResistance": 0.3,
+    "health": 30,
+    "maxhealth": 30,
     "fallDamage": false,
     "drops": [],
     "attributes": {

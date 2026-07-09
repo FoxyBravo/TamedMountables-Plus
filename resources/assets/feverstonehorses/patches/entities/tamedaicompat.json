@@ -494,16 +494,6 @@
         "path": "/server/behaviors/13/aitasks/-",
         "value": [
                 {
-                    "code": "followmaster",
-                    "priority": 2,
-                    "priorityForCancel": 1.9,
-                    "command": "followmaster",
-                    "movespeed": 0.035,
-                    "maxDistance": 8,
-                    "searchRange": 40,
-                    "allowTeleport": true
-                },
-                {
                     "code": "stay",
                     "priority": 2,
                     "priorityForCancel": 1.9,
