@@ -51,14 +51,18 @@
             ]
         },
         "gait": {
-            "idleGaits": { "Land": "idle" },
+            "idleGaits": { "Land": "idle", "Sea": "swimidle" },
             "gaits": [
-                { "code": "walkback", "movespeed": 0.011, "backwards": true, "animation": "walk", "animationSpeed": 1.4 },
-                { "code": "idle", "animation": "idle", "weight": 1 },
-                { "code": "walk", "movespeed": 0.018, "yawMultiplier": 1.2, "animation": "walk", "animationSpeed": 1.5 },
-                { "code": "trot", "movespeed": 0.03, "yawMultiplier": 0.9, "fallbackGaitCode": "walk", "animation": "run", "animationSpeed": 1.4 },
-                { "code": "sprint", "movespeed": 0.1, "yawMultiplier": 0.8, "fallbackGaitCode": "trot", "animation": "run", "animationSpeed": 1.4 },
-                { "code": "jump", "movespeed": 0.07, "yawMultiplier": 1, "fallbackGaitCode": "walk", "animation": "run", "animationSpeed": 1.4 }
+                { "code": "walkback", "movespeed": 0.011, "backwards": true, "animation": "Walk", "animationSpeed": 1.4, "weight": 10, "blendMode": "Average" },
+                { "code": "idle", "animation": "Idle", "weight": 1 },
+                { "code": "walk", "movespeed": 0.018, "yawMultiplier": 1.2, "animation": "Walk", "animationSpeed": 1.5 },
+                { "code": "trot", "movespeed": 0.036, "yawMultiplier": 0.9, "fallbackGaitCode": "walk", "animation": "Run", "animationSpeed": 1.25, "blendMode": "Average" },
+                { "code": "canter", "movespeed": 0.075, "yawMultiplier": 1, "fallbackGaitCode": "trot", "animation": "Run", "animationSpeed": 1.1 },
+                { "code": "sprint", "movespeed": 0.1, "yawMultiplier": 0.8, "fallbackGaitCode": "trot", "animation": "Run", "animationSpeed": 1.4, "blendMode": "Average", "weight": 10, "easeOutSpeed": 20 },
+                { "code": "jump", "movespeed": 0.1, "yawMultiplier": 1, "fallbackGaitCode": "walk", "animation": "Run", "animationSpeed": 1.4, "weight": 50, "blendMode": "Average" },
+                { "code": "swimforth", "movespeed": 0.02, "fallbackGaitCode": "swimidle", "environment": "Sea", "animation": "Walk", "animationSpeed": 1.2, "blendMode": "Average" },
+                { "code": "swimidle", "movespeed": 0.0, "environment": "Sea", "animation": "Idle", "animationSpeed": 1.2, "blendMode": "Average" },
+                { "code": "swimback", "movespeed": 0.01, "backwards": true, "fallbackGaitCode": "swimidle", "environment": "Sea", "animation": "Walk", "animationSpeed": 1.2, "blendMode": "Average" }
             ]
         },
         "rideable": {
@@ -67,7 +71,8 @@
                 { "controllable": true, "riderOffset": { "x": 0, "y": -0.6, "z": 0 } }
             ],
             "rideableGaitOrder": {
-                "Land": ["walkback", "idle", "walk", "sprint"]
+                "Land": ["walkback", "idle", "walk", "sprint"],
+                "Sea": ["swimback", "swimidle", "swimforth"]
             }
         }
     },
@@ -79,6 +84,16 @@
         "texturesByType": {
             "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
         },
+        "animations": [
+            { "code": "idle", "animation": "Idle", "blendMode": "AddAverage", "easeOutSpeed": 4, "triggeredBy": { "defaultAnim": true } },
+            { "code": "walk", "animation": "Walk", "animationSpeed": 1.0 },
+            { "code": "run", "animation": "Run", "animationSpeed": 1.0 },
+            { "code": "trot", "animation": "Run", "blendMode": "Average" },
+            { "code": "canter", "animation": "Run", "blendMode": "Average" },
+            { "code": "gallop", "animation": "Run", "blendMode": "Average" },
+            { "code": "jump", "animation": "Run", "blendMode": "Average" },
+            { "code": "swim", "animation": "Walk", "blendMode": "Average" }
+        ],
         "behaviors": [
             { "code": "repulseagents" },
             { "code": "controlledphysics" },
@@ -135,13 +150,13 @@
                 "code": "taskai",
                 "aiCreatureType": "LandCreature",
                 "aitasks": [
-                    { "code": "fleeentity", "entityCodes": [ "wolf-*", "bear-*", "hyena-*" ], "priority": 1.8, "movespeed": 0.04, "seekingRange": 18 },
+                    { "code": "fleeentity", "entityCodes": [ "wolf-*", "bear-*", "hyena-*" ], "priority": 1.8, "movespeed": 0.058, "seekingRange": 18, "animation": "gallop", "animationSpeed": 2.2, "instafleeOnDamageChance": 1 },
                     { "code": "useinventory", "priority": 1.5, "movespeed": 0.01 },
-                    { "code": "followleadholder", "priority": 1.45, "movespeed": 0.035 },
-                    { "code": "getoutofwater", "priority": 1.4, "movespeed": 0.02 },
+                    { "code": "followleadholder", "priority": 1.45, "movespeed": 0.035, "animation": "trot", "animationSpeed": 1.25 },
+                    { "code": "getoutofwater", "priority": 1.4, "movespeed": 0.02, "animation": "swim", "animationSpeed": 1.2 },
                     { "code": "idle", "priority": 1.2, "minDuration": 5000, "maxDuration": 10000 },
-                    { "code": "seekfoodandeat", "priority": 1.15, "movespeed": 0.01, "eatSound": "game:creature/hooved/eat" },
-                    { "code": "wander", "priority": 1.0, "movespeed": 0.012, "gliding": false, "maxHeightVariance": 10 },
+                    { "code": "seekfoodandeat", "priority": 1.15, "movespeed": 0.01, "eatSound": "game:creature/hooved/eat", "animation": "walk" },
+                    { "code": "wander", "priority": 1.0, "movespeed": 0.012, "gliding": false, "maxHeightVariance": 10, "animation": "walk" },
                     { "code": "lookaround", "priority": 0.5 }
                 ]
             },
