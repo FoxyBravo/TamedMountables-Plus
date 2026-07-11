@@ -1,11 +1,16 @@
 {
 	"editor": {
-		"allAngles": true,
-		"entityTextureMode": false
+		"backDropShape": "",
+		"collapsedPaths": "",
+		"allAngles": false,
+		"entityTextureMode": false,
+		"singleTexture": false,
+		"vsFormatConverted": false
 	},
 	"textureWidth": 256,
 	"textureHeight": 256,
 	"textureSizes": {
+		"Camel1.png": [256, 256]
 	},
 	"textures": {
 		"Camel1.png": "entity/land/camel/Camel1"
@@ -2574,7 +2579,7 @@
 	],
 	"animations": [
 		{
-			"name": "Walk",
+			"name": "walk",
 			"code": "walk",
 			"quantityframes": 68,
 			"onActivityStopped": "EaseOut",
@@ -2717,7 +2722,7 @@
 			]
 		},
 		{
-			"name": "Idle",
+			"name": "idle",
 			"code": "idle",
 			"quantityframes": 91,
 			"onActivityStopped": "EaseOut",
@@ -2773,7 +2778,7 @@
 			]
 		},
 		{
-			"name": "Run",
+			"name": "run",
 			"code": "run",
 			"quantityframes": 30,
 			"onActivityStopped": "EaseOut",
