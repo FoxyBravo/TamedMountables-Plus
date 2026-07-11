@@ -80,7 +80,7 @@
                     "animation": "Walk",
                     "yawMultiplier": 1.2,
                     "movespeed": 0.018,
-                    "animationSpeed": 3.0
+                    "animationSpeed": 5.0
                 },
                 {
                     "code": "trot",

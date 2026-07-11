@@ -2579,7 +2579,7 @@
 	],
 	"animations": [
 		{
-			"name": "walk",
+			"name": "Walk",
 			"code": "walk",
 			"quantityframes": 68,
 			"onActivityStopped": "EaseOut",
@@ -2722,7 +2722,7 @@
 			]
 		},
 		{
-			"name": "idle",
+			"name": "Idle",
 			"code": "idle",
 			"quantityframes": 91,
 			"onActivityStopped": "EaseOut",
@@ -2778,7 +2778,7 @@
 			]
 		},
 		{
-			"name": "run",
+			"name": "Run",
 			"code": "run",
 			"quantityframes": 30,
 			"onActivityStopped": "EaseOut",

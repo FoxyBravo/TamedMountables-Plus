@@ -55,7 +55,7 @@
             "gaits": [
                 { "code": "walkback", "movespeed": 0.011, "backwards": true, "animation": "walk", "animationSpeed": 1.4 },
                 { "code": "idle", "animation": "idle", "weight": 1 },
-                { "code": "walk", "movespeed": 0.018, "yawMultiplier": 1.2, "animation": "walk", "animationSpeed": 3.0 },
+                { "code": "walk", "movespeed": 0.018, "yawMultiplier": 1.2, "animation": "walk", "animationSpeed": 5.0 },
                 { "code": "trot", "movespeed": 0.03, "yawMultiplier": 0.9, "fallbackGaitCode": "walk", "animation": "run", "animationSpeed": 1.4 },
                 { "code": "sprint", "movespeed": 0.09, "yawMultiplier": 0.8, "fallbackGaitCode": "trot", "animation": "run", "animationSpeed": 1.4 },
                 { "code": "jump", "movespeed": 0.07, "yawMultiplier": 1, "fallbackGaitCode": "walk", "animation": "run", "animationSpeed": 1.4 }
