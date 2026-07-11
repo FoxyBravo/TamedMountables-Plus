@@ -80,7 +80,7 @@
                     "animation": "Walk",
                     "yawMultiplier": 1.2,
                     "movespeed": 0.018,
-                    "animationSpeed": 5.0
+                    "animationSpeed": 1.5
                 },
                 {
                     "code": "trot",
@@ -99,7 +99,7 @@
                 },
                 {
                     "code": "sprint",
-                    "movespeed": 0.09,
+                    "movespeed": 0.1,
                     "yawMultiplier": 0.8,
                     "fallbackGaitCode": "trot",
                     "animation": "Run",
