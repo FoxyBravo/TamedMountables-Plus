@@ -969,6 +969,7 @@
                         },
                         {
                             "code": "useinventory",
+                            "entityCodes": [ "horse-tamed-*", "taminghorse-*" ],
                             "animation": "eat",
                             "animationSpeed": 1,
                             "priority": 1.5,
@@ -1010,6 +1011,7 @@
                         },
                         {
                             "code": "seekfoodandeat",
+                            "entityCodes": [ "horse-tamed-*", "taminghorse-*" ],
                             "movespeed": 0.004,
                             "priority": 1.35,
                             "eatSound": "game:creature/animal-eat-small",

@@ -652,6 +652,7 @@
                     },
                     {
                         "code": "useinventory",
+                        "entityCodes": [ "camel-tamed-*" ],
                         "animation": "Idle",
                         "animationSpeed": 1,
                         "priority": 1.5,
@@ -693,6 +694,7 @@
                     },
                     {
                         "code": "seekfoodandeat",
+                        "entityCodes": [ "camel-tamed-*" ],
                         "movespeed": 0.004,
                         "priority": 1.35,
                         "eatSound": "game:creature/animal-eat-small",
