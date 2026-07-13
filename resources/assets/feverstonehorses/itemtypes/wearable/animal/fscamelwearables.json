@@ -1,0 +1,65 @@
+{
+	"code": "fscamelwearables",
+	"variantgroups": [
+		{ "code": "category",
+			"states": [ "middlebackupper", "lowerbackside" ]
+		},
+		{ "code": "type",
+			"states": [ "saddle", "saddlebags" ]
+		}
+	],
+	"allowedVariants": [
+		"fscamelwearables-middlebackupper-saddle",
+		"fscamelwearables-lowerbackside-saddlebags"
+	],
+	"attributes": {
+		"attachableToEntity": {
+			"categoryCodeByType": {
+				"*-middlebackupper-saddle": "saddle-camel",
+				"*-lowerbackside-saddlebags": "sidebags-camel"
+			},
+			"attachedShapeByType": {
+				"*-lowerbackside-saddlebags": { "base": "item/equipment/rear/saddlebags-camel" }
+			}
+		},
+		"isSaddleByType": {
+			"*-middlebackupper-saddle": true
+		},
+		"backpackByType": {
+			"*-lowerbackside-saddlebags": { "quantitySlots": 22 }
+		},
+		"interactPassthroughByType": {
+			"*-saddle": true
+		},
+		"handbook": {
+			"groupBy": ["fscamelwearables-*-*"]
+		}
+	},
+	"behaviorsByType": {
+		"*-lowerbackside-saddlebags": [ { "name": "HeldBag" } ]
+	},
+	"maxstacksize": 1,
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"clothing": [ "*" ]
+	},
+	"guiTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": -21, "y": -50, "z": 180 },
+		"origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+		"scale": 1.1
+	},
+	"groundTransform": {
+		"scale": 2
+	},
+	"fpHandTransform": {
+		"translation": { "x": -0.3, "y": 0.2, "z": 0 },
+		"rotation": { "x": -180, "y": -113, "z": 171 }
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.9, "y": -1.4, "z": -1.05 },
+		"rotation": { "x": -180, "y": 0, "z": -156 },
+		"scale": 0.35
+	}
+}

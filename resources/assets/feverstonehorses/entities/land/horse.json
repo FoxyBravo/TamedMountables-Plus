@@ -588,6 +588,7 @@
                 { "code": "rideable",
                     "enabledByType": { "*-tamed-*": true, "*": false } },
                 { "code": "mouthinventory",
+                    "enabledByType": { "*-tamed-*": true, "*": false },
                     "acceptStacks": [
                         { "type": "item", "code": "vegetable-carrot" },
                         { "type": "item", "code": "vegetable-cabbage" },
@@ -832,6 +833,7 @@
                 { "code": "rideable",
                     "enabledByType": { "*-tamed-*": true, "*": false } },
                 { "code": "mouthinventory",
+                    "enabledByType": { "*-tamed-*": true, "*": false },
                     "acceptStacks": [
                         { "type": "item", "code": "vegetable-carrot" },
                         { "type": "item", "code": "vegetable-cabbage" },
@@ -967,6 +969,7 @@
                         },
                         {
                             "code": "useinventory",
+                            "entityCodes": [ "horse-tamed-*", "taminghorse-*" ],
                             "animation": "eat",
                             "animationSpeed": 1,
                             "priority": 1.5,
@@ -1008,6 +1011,7 @@
                         },
                         {
                             "code": "seekfoodandeat",
+                            "entityCodes": [ "horse-tamed-*", "taminghorse-*" ],
                             "movespeed": 0.004,
                             "priority": 1.35,
                             "eatSound": "game:creature/animal-eat-small",

@@ -1,0 +1,66 @@
+{
+  version: 2,
+  mediaFileName: 'Camel Sounds - Sound Effect ｜ ProSounds [KX4xJ8T1QQQ].m4a',
+  cutSegments: [
+    {
+      start: 9.325613188953488,
+      end: 10.694510537790697,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 11.45310781860465,
+      end: 13.06726594244186,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 13.261193066860464,
+      end: 14.316384773255812,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 14.955203536046511,
+      end: 15.902024202325581,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 16.443879402906976,
+      end: 18.445891775581394,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 1.089414140116279,
+      end: 3.71313405872093,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 4.323434126744186,
+      end: 6.8958203947674415,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 7.751381237790698,
+      end: 8.835091638953488,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 0.17681590755813953,
+      end: 0.6730411965116279,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 18.833746024418602,
+      end: 19.438342353488373,
+      name: '',
+      selected: true,
+    },
+  ],
+}
