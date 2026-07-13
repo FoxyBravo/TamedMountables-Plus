@@ -19,7 +19,6 @@
 				"*-lowerbackside-saddlebags": "sidebags-camel"
 			},
 			"attachedShapeByType": {
-				"*-middlebackupper-saddle": { "base": "item/equipment/back/saddle-camel" },
 				"*-lowerbackside-saddlebags": { "base": "item/equipment/rear/saddlebags-camel" }
 			}
 		},
