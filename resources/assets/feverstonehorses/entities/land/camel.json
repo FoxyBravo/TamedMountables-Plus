@@ -710,7 +710,7 @@
                         "animation": "Idle",
                         "animationSpeed": 1.4,
                         "whenInEmotionState": "aggressiveondamage",
-                        "sound": "horse/horseattack"
+                        "sound": "feverstonehorses:camel/camelattack"
                     },
                     {
                         "code": "fleeentity",
@@ -748,7 +748,7 @@
                         "priorityForCancel": 1.7,
                         "eatItemCategories": [ "Vegetable", "Grain", "Fruit" ],
                         "eatItemCodes": [ "drygrass", "feverstonehorses:carrotbundle", "feverstonehorses:drygrassbundle" ],
-                        "eatSound": "horse/horseeating",
+                        "eatSound": "feverstonehorses:camel/camelidle",
                         "soundRange": 3,
                         "soundStartMs": 950,
                         "useTime": 3.2,
@@ -805,7 +805,7 @@
                         "mincooldown": 6000,
                         "maxcooldown": 20000,
                         "animation": "Idle",
-                        "sound": "horse/horseeating",
+                        "sound": "feverstonehorses:camel/camelidle",
                         "soundRange": 3,
                         "soundStartMs": 800,
                         "animationSpeed": 0.9
@@ -844,9 +844,9 @@
     },
     "soundsByType": {
         "*": {
-            "hurt": "feverstonehorses:horse/horsedamage",
-            "death": "feverstonehorses:horse/horsedamage",
-            "idle": "feverstonehorses:horse/horseidle*"
+            "hurt": "feverstonehorses:camel/cameldamage",
+            "death": "feverstonehorses:camel/cameldeath",
+            "idle": "feverstonehorses:camel/camelidle*"
         }
     },
     "idleSoundChance": 0.001,

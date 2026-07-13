@@ -212,5 +212,14 @@
             { "code": "ropetieable" },
             { "code": "entitystatetags" }
         ]
-    }
+    },
+    "soundsByType": {
+        "*": {
+            "hurt": "feverstonehorses:camel/cameldamage",
+            "death": "feverstonehorses:camel/cameldeath",
+            "idle": "feverstonehorses:camel/camelidle*"
+        }
+    },
+    "idleSoundChance": 0.001,
+    "hurtSoundChance": 0.01
 }
