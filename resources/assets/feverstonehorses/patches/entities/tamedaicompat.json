@@ -1,11 +1,12 @@
 [
     {
-        "__comment": "===TamedAI-Plus Integration - Client Behaviors (horse.json)===",
+        "__comment": "===TamedAI-Plus Integration - Client Behaviors (horse.json - tamed only, wild adults NOT feedable)===",
         "op": "addeach",
         "path": "/client/behaviors/-",
         "value": [
             { "code": "nametag", "showtagonlywhentargeted": true },
             { "code": "tameable",
+                "enabledByType": { "*-tamed-*": true, "*": false },
                 "treat": [
                     { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
                     { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
@@ -52,12 +53,13 @@
         "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
     },
     {
-        "__comment": "===TamedAI-Plus Integration - Server Behaviors (horse.json)===",
+        "__comment": "===TamedAI-Plus Integration - Server Behaviors (horse.json - tamed only)===",
         "op": "addeach",
         "path": "/server/behaviors/-",
         "value": [
             { "code": "nametag", "showtagonlywhentargeted": true },
             { "code": "tameable",
+                "enabledByType": { "*-tamed-*": true, "*": false },
                 "disobediencePerDay": 0.01,
                 "size": "large",
                 "tameEntityCode": "feverstonehorses:horse-tamed-{gender}-{type}",
@@ -391,7 +393,7 @@
         "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
     },
     {
-        "__comment": "===Camel: TamedAI-Plus Client Behaviors===",
+        "__comment": "===Camel: TamedAI-Plus Client Behaviors (tamedcamel only - wild adults NOT feedable)===",
         "op": "addeach",
         "path": "/client/behaviors/-",
         "value": [
@@ -413,11 +415,11 @@
                 ]
             }
         ],
-        "file": "feverstonehorses:entities/land/camel.json",
+        "file": "feverstonehorses:entities/land/tamedcamel.json",
         "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
     },
     {
-        "__comment": "===Camel: TamedAI-Plus Server Behaviors (tameable)===",
+        "__comment": "===Camel: TamedAI-Plus Server Behaviors (tameable - tamedcamel only)===",
         "op": "addeach",
         "path": "/server/behaviors/-",
         "value": [
@@ -425,7 +427,6 @@
             { "code": "tameable",
                 "disobediencePerDay": 0.01,
                 "size": "large",
-                "tameEntityCode": "feverstonehorses:camel-tamed-{gender}",
                 "treat": [
                     { "code": "carrot", "domain": "game", "progress": 0.10, "cooldown": 0.5 },
                     { "code": "cabbage", "domain": "game", "progress": 0.03, "cooldown": 1 },
@@ -442,7 +443,7 @@
                 ]
             }
         ],
-        "file": "feverstonehorses:entities/land/camel.json",
+        "file": "feverstonehorses:entities/land/tamedcamel.json",
         "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
     },
     {
