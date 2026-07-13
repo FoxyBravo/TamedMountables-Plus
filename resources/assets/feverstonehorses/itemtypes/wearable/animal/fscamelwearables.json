@@ -27,7 +27,7 @@
 			"*-middlebackupper-saddle": true
 		},
 		"backpackByType": {
-			"*-lowerbackside-saddlebags": { "quantitySlots": 20 }
+			"*-lowerbackside-saddlebags": { "quantitySlots": 22 }
 		},
 		"interactPassthroughByType": {
 			"*-saddle": true
