@@ -217,7 +217,8 @@
         "*": {
             "hurt": "feverstonehorses:camel/cameldamage",
             "death": "feverstonehorses:camel/cameldeath",
-            "idle": "feverstonehorses:camel/camelidle*"
+            "idle": "feverstonehorses:camel/camelidle*",
+            "wounded": "feverstonehorses:camel/camelwounded"
         }
     },
     "idleSoundChance": 0.001,

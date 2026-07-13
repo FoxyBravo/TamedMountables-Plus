@@ -748,7 +748,7 @@
                         "priorityForCancel": 1.7,
                         "eatItemCategories": [ "Vegetable", "Grain", "Fruit" ],
                         "eatItemCodes": [ "drygrass", "feverstonehorses:carrotbundle", "feverstonehorses:drygrassbundle" ],
-                        "eatSound": "feverstonehorses:camel/camelidle",
+                        "eatSound": "feverstonehorses:camel/cameleating",
                         "soundRange": 3,
                         "soundStartMs": 950,
                         "useTime": 3.2,
@@ -846,7 +846,8 @@
         "*": {
             "hurt": "feverstonehorses:camel/cameldamage",
             "death": "feverstonehorses:camel/cameldeath",
-            "idle": "feverstonehorses:camel/camelidle*"
+            "idle": "feverstonehorses:camel/camelidle*",
+            "wounded": "feverstonehorses:camel/camelwounded"
         }
     },
     "idleSoundChance": 0.001,

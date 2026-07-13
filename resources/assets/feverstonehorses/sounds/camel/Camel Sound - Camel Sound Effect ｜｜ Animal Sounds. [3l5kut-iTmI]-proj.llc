@@ -1,0 +1,90 @@
+{
+  version: 2,
+  mediaFileName: 'Camel Sound - Camel Sound Effect ｜｜ Animal Sounds. [3l5kut-iTmI].m4a',
+  cutSegments: [
+    {
+      start: 160.72420613023255,
+      end: 161.3215176560823,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 161.5775083100179,
+      end: 162.018381102907,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 162.60147092576028,
+      end: 163.57802786484794,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 163.90038646610017,
+      end: 165.35574073940072,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 166.77791103904292,
+      end: 167.67387832781753,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 168.42288801896242,
+      end: 177.034919277907,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 186.79943520930235,
+      end: 187.64852355116278,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 210.79768464439536,
+      end: 211.5470735809535,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 209.53802100432557,
+      end: 210.14689951527907,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 208.22166017497673,
+      end: 208.90449154151165,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 27.047572180232557,
+      end: 31.128674210465114,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 120.98824122848836,
+      end: 125.31585277732559,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 116.27032294186046,
+      end: 116.88659673837209,
+      name: '',
+      selected: false,
+    },
+    {
+      start: 13.979554800069769,
+      end: 15.92697999704651,
+      name: '',
+      selected: true,
+    },
+  ],
+}
