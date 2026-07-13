@@ -1649,6 +1649,566 @@
 										}
 									],
 									"stepParentName": ""
+								},
+								{
+									"name": "RightFrontStorage",
+									"from": [-16.48, -7.8, 0.98],
+									"to": [-16.48, -7.8, 0.98],
+									"rotationOrigin": [-16.48, -7.8, 0.98],
+									"children": [
+										{
+											"name": "smallbowR",
+											"from": [5.5, 6.974, 1.54],
+											"to": [9.9, 8.074, 2.64],
+											"rotationOrigin": [5.5, 6.974, 1.54],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": -90,
+											"rotationY": 42,
+											"rotationZ": -4,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "PotParentR",
+											"from": [3.3, 0.924, -2.42],
+											"to": [8.8, 11.924, 3.08],
+											"rotationOrigin": [8.8, 11.924, 3.08],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 5, 5], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 5, 5], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": 13,
+											"rotationY": -7,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "CrockParentR",
+											"from": [-3.85, 3.124, -11.33],
+											"to": [-3.63, 3.344, -11.11],
+											"rotationOrigin": [-3.85, 3.124, -11.77],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": 20,
+											"rotationY": -7,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "RightFrontStorage_geo",
+											"from": [0, 0, 0.55],
+											"to": [7.7, 9.9, 2.75],
+											"rotationOrigin": [0, 0, 0.55],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 7, 9], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 2, 9], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 7, 9], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 2, 9], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 7, 2], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 7, 2], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "RFrontAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
+								},
+								{
+									"name": "LeftFrontStorage",
+									"from": [-16.48, -7.8, 16.38],
+									"to": [-16.48, -7.8, 16.38],
+									"rotationOrigin": [-16.48, -7.8, 16.38],
+									"children": [
+										{
+											"name": "smallbowL",
+											"from": [5.5, 6.974, 2.09],
+											"to": [9.9, 8.074, 3.19],
+											"rotationOrigin": [5.5, 6.974, 2.09],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 4, 1], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": -90,
+											"rotationY": 42,
+											"rotationZ": -4,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "PotParentL",
+											"from": [3.3, 0.924, -0.22],
+											"to": [8.8, 11.924, 5.28],
+											"rotationOrigin": [8.8, 11.924, -0.22],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 5, 5], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 5, 5], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": -13,
+											"rotationY": 7,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "CrockParentL",
+											"from": [-6.05, -1.826, -1.65],
+											"to": [-5.83, -1.606, -1.43],
+											"rotationOrigin": [-5.94, -1.76, -1.54],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": -20,
+											"rotationY": 7,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "LeftFrontStorage_geo",
+											"from": [0, 0, 0],
+											"to": [7.7, 9.9, 2.2],
+											"rotationOrigin": [0, 0, 0],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 7, 9], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 2, 9], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 7, 9], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 2, 9], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 7, 2], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 7, 2], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "LFrontAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
+								},
+								{
+									"name": "MidLowerStorage",
+									"from": [-3.48, 4.54, 5.08],
+									"to": [-3.48, 4.54, 5.08],
+									"rotationOrigin": [-3.48, 4.54, 5.08],
+									"rotationZ": -7.5,
+									"children": [
+										{
+											"name": "MidLowerStorage_geo",
+											"from": [-1, -2, -2],
+											"to": [9, 5.5, 12],
+											"rotationOrigin": [0, 0, -1],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 10, 5], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 10, 5], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 10, 5], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 10, 5], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 10, 10], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 10, 10], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "MidLowerAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
+								},
+								{
+									"name": "MidUpperStorage",
+									"from": [1.02, 11.04, 10.08],
+									"to": [1.02, 11.04, 10.08],
+									"rotationOrigin": [1.02, 11.04, 10.08],
+									"rotationZ": -2.5,
+									"children": [
+										{
+											"name": "MidUpperStorage_geo",
+											"from": [-4.5, -2.5, -5],
+											"to": [5.5, 1.5, 5],
+											"rotationOrigin": [-4.5, -2.5, -5],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 10, 4], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 10, 4], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 10, 4], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 10, 4], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 10, 10], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 10, 10], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "MidUpperAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
+								},
+								{
+									"name": "MidSideStorageR",
+									"from": [11.32, -3.86, 1.12],
+									"to": [11.32, -3.86, 1.12],
+									"rotationOrigin": [11.32, -3.86, 1.12],
+									"children": [
+										{
+											"name": "LanternParentR",
+											"from": [-2.2, 0, -4.73],
+											"to": [-2.09, 0.11, -4.62],
+											"rotationOrigin": [-2.2, 0, -4.73],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 0.5, 0.5], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": 20,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "MidSideStorageR_geo",
+											"from": [-6.2, 0, -0.1],
+											"to": [-1.8, 7.7, 3.2],
+											"rotationOrigin": [-6.2, 0, -0.1],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 4, 7], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 2, 7], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 4, 7], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 2, 7], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 4, 2], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 4, 2], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "RLanternAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
+								},
+								{
+									"name": "MidSideStorageL",
+									"from": [7.32, -3.86, 17.12],
+									"to": [7.32, -3.86, 17.12],
+									"rotationOrigin": [7.32, -3.86, 17.12],
+									"children": [
+										{
+											"name": "LanternParentL",
+											"from": [-2.2, -1.65, -0.55],
+											"to": [-2.09, -1.54, -0.44],
+											"rotationOrigin": [-2.2, -1.65, -0.55],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 1, 1], "autoUv": false, "snapUv": false}
+											},
+											"rotationX": -12,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "MidSideStorageL_geo",
+											"from": [-2.2, 0, -1.1],
+											"to": [2.2, 7.7, 2.2],
+											"rotationOrigin": [-2.2, 0, -1.1],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 4, 7], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 2, 7], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 4, 7], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 2, 7], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 4, 2], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 4, 2], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "LLanternAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
+								},
+								{
+									"name": "RearSideStorage",
+									"from": [9.7309, -4.7903, 1.08],
+									"to": [9.7309, -4.7903, 1.08],
+									"rotationOrigin": [9.7309, -4.7903, 1.08],
+									"rotationZ": -3.7,
+									"children": [
+										{
+											"name": "RearSideStorage_geo",
+											"from": [0, 0, 0],
+											"to": [9.317, 10.648, 18.634],
+											"rotationOrigin": [0, 0, 0],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 7, 8], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 14, 8], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 7, 8], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 14, 8], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 7, 14], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 7, 14], "autoUv": false, "snapUv": false}
+											},
+											"rotationZ": 2.5,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "RearSideAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
+								},
+								{
+									"name": "RearUpperStorage",
+									"from": [21.8927, 8.2976, 10.08],
+									"to": [21.8927, 8.2976, 10.08],
+									"rotationOrigin": [21.8927, 8.2976, 10.08],
+									"rotationZ": -16.2,
+									"children": [
+										{
+											"name": "PillionParent",
+											"from": [-3.85, -2.2, -3.3],
+											"to": [3.3, -1.1, 3.3],
+											"rotationOrigin": [-0.55, -2.2, -0.55],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 6.5, 1], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 6, 1], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 6.5, 1], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 6, 1], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 6.5, 6], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 6.5, 6], "autoUv": false, "snapUv": false}
+											},
+											"rotationZ": 2,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "BedrollParent",
+											"from": [-3.85, -1.54, -5.5],
+											"to": [1.65, 3.96, 5.5],
+											"rotationOrigin": [-3.85, -1.1, -5.5],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 5, 5], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 10, 5], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 5, 5], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 10, 5], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 5, 10], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										},
+										{
+											"name": "RearUpperStorage_geo",
+											"from": [-3.85, -2.2, -5.5],
+											"to": [3.85, 2.2, 5.5],
+											"rotationOrigin": [-3.85, -2.2, -5.5],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 7, 4], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 10, 4], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 7, 4], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 10, 4], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 7, 10], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 7, 10], "autoUv": false, "snapUv": false}
+											},
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
+										}
+									],
+									"stepParentName": "",
+									"attachmentpoints": [
+										{
+											"code": "RearUpperAP",
+											"posX": "0",
+											"posY": "0",
+											"posZ": "0",
+											"rotationX": "0",
+											"rotationY": "0",
+											"rotationZ": "0"
+										}
+									]
 								}
 							],
 							"stepParentName": ""
@@ -2407,6 +2967,28 @@
 												}
 											],
 											"stepParentName": ""
+										},
+										{
+											"name": "NeckStorage_geo",
+											"from": [-7.67948, -12.50377, -3.7674],
+											"to": [0.38452, -8.72377, 3.7674],
+											"rotationOrigin": [6.19359, -8.43206, 10.08],
+											"uv": [0, 0],
+											"shade": true,
+											"faces": {
+												"north": {"texture": "#missing_texture", "uv": [0, 0, 6, 3], "autoUv": false, "snapUv": false},
+												"east": {"texture": "#missing_texture", "uv": [0, 0, 5.5, 3], "autoUv": false, "snapUv": false},
+												"south": {"texture": "#missing_texture", "uv": [0, 0, 6, 3], "autoUv": false, "snapUv": false},
+												"west": {"texture": "#missing_texture", "uv": [0, 0, 5.5, 3], "autoUv": false, "snapUv": false},
+												"up": {"texture": "#missing_texture", "uv": [0, 0, 6, 5.5], "autoUv": false, "snapUv": false},
+												"down": {"texture": "#missing_texture", "uv": [0, 0, 6, 5.5], "autoUv": false, "snapUv": false}
+											},
+											"rotationZ": -12.5,
+											"stepParentName": "",
+											"climateColorMap": "",
+											"gradientShade": false,
+											"renderPass": 0,
+											"seasonColorMap": ""
 										}
 									],
 									"stepParentName": ""
@@ -2579,7 +3161,7 @@
 	],
 	"animations": [
 		{
-			"name": "Walk",
+			"name": "walk",
 			"code": "walk",
 			"quantityframes": 68,
 			"onActivityStopped": "EaseOut",
@@ -2596,7 +3178,7 @@
 						"frontlobe": {"rotationX": 0, "rotationY": 0, "rotationZ": 0.5, "offsetX": -0.15, "offsetY": 0, "offsetZ": 0},
 						"backlobe": {"rotationX": 0, "rotationY": 0, "rotationZ": 0.5, "offsetX": -0.15, "offsetY": 0, "offsetZ": 0},
 						"below knee": {"rotationX": 0, "rotationY": 0, "rotationZ": -7},
-						"Below_knee2": {"rotationX": 0, "rotationY": 0, "rotationZ": 23},
+						"Below_knee2": {"rotationX": 0, "rotationY": 0, "rotationZ": 30},
 						"below_knee3": {"rotationX": 0, "rotationY": 0, "rotationZ": 1.5},
 						"Below_knee4": {"rotationX": 0, "rotationY": 0, "rotationZ": 59},
 						"below leg": {"rotationX": 0, "rotationY": 0, "rotationZ": 10},
@@ -2671,7 +3253,7 @@
 						"LegBR": {"rotationX": 0, "rotationY": 0, "rotationZ": 4.5},
 						"frontlobe": {"rotationX": 0, "rotationY": 0, "rotationZ": 0.5, "offsetX": -0.15, "offsetY": 0, "offsetZ": 0},
 						"backlobe": {"rotationX": 0, "rotationY": 0, "rotationZ": 0.5, "offsetX": -0.15, "offsetY": 0, "offsetZ": 0},
-						"below knee": {"rotationX": 0, "rotationY": 0, "rotationZ": -23},
+						"below knee": {"rotationX": 0, "rotationY": 0, "rotationZ": -30},
 						"Below_knee2": {"rotationX": 0, "rotationY": 0, "rotationZ": 7},
 						"below leg": {"rotationX": 0, "rotationY": 0, "rotationZ": 28.5},
 						"below_leg2": {"rotationX": 0, "rotationY": 0, "rotationZ": -10}
@@ -2722,9 +3304,9 @@
 			]
 		},
 		{
-			"name": "Idle",
+			"name": "idle",
 			"code": "idle",
-			"quantityframes": 91,
+			"quantityframes": 90,
 			"onActivityStopped": "EaseOut",
 			"onAnimationEnd": "Repeat",
 			"keyframes": [
@@ -2778,7 +3360,7 @@
 			]
 		},
 		{
-			"name": "Run",
+			"name": "run",
 			"code": "run",
 			"quantityframes": 30,
 			"onActivityStopped": "EaseOut",

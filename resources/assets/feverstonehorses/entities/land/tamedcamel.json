@@ -43,11 +43,17 @@
         },
         "floatupwhenstuck": { "onlyWhenDead": true },
         "selectionboxes": {
-            "selectionBoxes": ["MidUpperAP"]
+            "selectionBoxes": ["MidUpperAP", "RearSideAP", "RearUpperAP", "LLanternAP", "RLanternAP", "RFrontAP", "LFrontAP"]
         },
         "rideableaccessories": {
             "wearableSlots": [
-                { "code": "middlebackupper", "forCategoryCodes": ["saddle-{type}"], "attachmentPointCode": "MidUpperAP" }
+                { "code": "middlebackupper", "forCategoryCodes": ["saddle-{type}"], "attachmentPointCode": "MidUpperAP" },
+                { "code": "lowerbackside", "forCategoryCodes": ["sidebags-{type}"], "attachmentPointCode": "RearSideAP" },
+                { "code": "lowerback", "forCategoryCodes": ["bedroll"], "attachmentPointCode": "RearUpperAP" },
+                { "code": "fswmiddlebackleft", "forCategoryCodes": [ "lantern" ], "attachmentPointCode": "LLanternAP" },
+                { "code": "fswmiddlebackright", "forCategoryCodes": [ "lantern" ], "attachmentPointCode": "RLanternAP" },
+                { "code": "frontrightside", "forCategoryCodes": ["utilities", "pot", "weaponfalx", "weapon1m", "bowshort", "bowlong" ], "attachmentPointCode": "RFrontAP" },
+                { "code": "frontleftside", "forCategoryCodes": ["utilities", "pot", "weaponfalx", "weapon1m", "bowshort", "bowlong" ], "attachmentPointCode": "LFrontAP" }
             ]
         },
         "gait": {
@@ -102,6 +108,8 @@
             { "code": "floatupwhenstuck" },
             { "code": "gait" },
             { "code": "rideable" },
+            { "code": "selectionboxes" },
+            { "code": "rideableaccessories" },
             { "code": "ropetieable" }
         ]
     },
@@ -160,6 +168,8 @@
                     { "code": "lookaround", "priority": 0.5 }
                 ]
             },
+            { "code": "selectionboxes" },
+            { "code": "rideableaccessories" },
             { "code": "ownable", "groupCode": "mountableanimal" },
             { "code": "ropetieable" },
             { "code": "entitystatetags" }

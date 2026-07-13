@@ -55,11 +55,17 @@
         "floatupwhenstuck": { "onlyWhenDead": true },
         "rideableaccessories": {
             "wearableSlots": [
-                { "code": "middlebackupper", "forCategoryCodes": ["saddle-{type}"], "attachmentPointCode": "MidUpperAP" }
+                { "code": "middlebackupper", "forCategoryCodes": ["saddle-{type}"], "attachmentPointCode": "MidUpperAP" },
+                { "code": "lowerbackside", "forCategoryCodes": ["sidebags-{type}"], "attachmentPointCode": "RearSideAP" },
+                { "code": "lowerback", "forCategoryCodes": ["bedroll"], "attachmentPointCode": "RearUpperAP" },
+                { "code": "fswmiddlebackleft", "forCategoryCodes": [ "lantern" ], "attachmentPointCode": "LLanternAP" },
+                { "code": "fswmiddlebackright", "forCategoryCodes": [ "lantern" ], "attachmentPointCode": "RLanternAP" },
+                { "code": "frontrightside", "forCategoryCodes": ["utilities", "pot", "weaponfalx", "weapon1m", "bowshort", "bowlong" ], "attachmentPointCode": "RFrontAP" },
+                { "code": "frontleftside", "forCategoryCodes": ["utilities", "pot", "weaponfalx", "weapon1m", "bowshort", "bowlong" ], "attachmentPointCode": "LFrontAP" }
             ]
         },
         "selectionboxes": {
-            "selectionBoxes": ["MidUpperAP"]
+            "selectionBoxes": ["MidUpperAP", "RearSideAP", "RearUpperAP", "LLanternAP", "RLanternAP", "RFrontAP", "LFrontAP"]
         },
         "gait": {
             "enabledByType": { "*-tamed-*": true, "*": false },
@@ -508,6 +514,10 @@
             { "code": "floatupwhenstuck" },
             { "code": "gait" },
             { "code": "rideable" },
+            { "code": "selectionboxes",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "rideableaccessories",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
             { "code": "ropetieable" }
         ]
     },
@@ -710,6 +720,10 @@
                     { "code": "lookaround", "priority": 0.5 }
                 ]
             },
+            { "code": "selectionboxes",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "rideableaccessories",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
             { "code": "ownable", "groupCode": "mountableanimal" },
             { "code": "ropetieable" },
             { "code": "pettable", "minGeneration": 1 },

@@ -228,5 +228,10 @@
 	"item-dead-creature-camel-tamed-female": "Dead Camel",
 	"itemdesc-creature-camel-tamed-female": "A reliable desert mount.",
  
-	"deadcreature-horsetrampled": "Appears to be trampled by a horse."
+	"deadcreature-horsetrampled": "Appears to be trampled by a horse.",
+
+	"item-fscamelwearables-middlebackupper-saddle": "Camel Saddle",
+	"itemdesc-fscamelwearables-middlebackupper-saddle": "A saddle made for a camel.",
+	"item-fscamelwearables-lowerbackside-saddlebags": "Camel Saddlebags",
+	"itemdesc-fscamelwearables-lowerbackside-saddlebags": "Saddlebags for a camel. Provides extra storage."
 }
