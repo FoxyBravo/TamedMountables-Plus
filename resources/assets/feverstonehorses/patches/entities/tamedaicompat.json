@@ -490,9 +490,9 @@
         "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
     },
     {
-        "__comment": "===Camel: Remove pettable (index 14) and add pettableextended===",
+        "__comment": "===Camel: Remove pettable (index 18) and add pettableextended===",
         "op": "remove",
-        "path": "/server/behaviors/14",
+        "path": "/server/behaviors/18",
         "file": "feverstonehorses:entities/land/camel.json",
         "dependsOn": [ { "modid": "tamedaiplus" }, { "modid": "jaunt", "invert": true } ]
     },
