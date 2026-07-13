@@ -514,6 +514,23 @@
             { "code": "floatupwhenstuck" },
             { "code": "gait" },
             { "code": "rideable" },
+            { "code": "mouthinventory",
+                "enabledByType": { "*-tamed-*": true, "*": false },
+                "acceptStacks": [
+                    { "type": "item", "code": "vegetable-carrot" },
+                    { "type": "item", "code": "vegetable-cabbage" },
+                    { "type": "item", "code": "vegetable-turnip" },
+                    { "type": "item", "code": "feverstonehorses:carrotbundle" },
+                    { "type": "item", "code": "feverstonehorses:drygrassbundle" },
+                    { "type": "item", "code": "drygrass" },
+                    { "type": "item", "code": "fruit-pinkapple" },
+                    { "type": "item", "code": "fruit-redapple" },
+                    { "type": "item", "code": "fruit-yellowapple" },
+                    { "type": "item", "code": "grain-flax" },
+                    { "type": "item", "code": "grain-rye" },
+                    { "type": "item", "code": "grain-spelt" }
+                ]
+            },
             { "code": "selectionboxes",
                 "enabledByType": { "*-tamed-*": true, "*": false } },
             { "code": "rideableaccessories",
