@@ -534,6 +534,7 @@
             { "code": "rideable",
                 "enabledByType": { "*-tamed-*": true, "*": false } },
             { "code": "mouthinventory",
+                "enabledByType": { "*-tamed-*": true, "*": false },
                 "acceptStacks": [
                     { "type": "item", "code": "vegetable-carrot" },
                     { "type": "item", "code": "vegetable-cabbage" },
