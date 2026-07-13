@@ -49,7 +49,7 @@
     },
     "behaviorConfigs": {
         "controlledphysics": {
-            "stepHeight": 1.1,
+            "stepHeight": 1.1251,
             "stepUpSpeed": 0.1
         },
         "floatupwhenstuck": { "onlyWhenDead": true },
@@ -89,10 +89,11 @@
                 },
                 {
                     "code": "walk",
-                    "movespeed": 0.018,
+                    "movespeed": 0.019,
                     "yawMultiplier": 1.2,
                     "animation": "Walk",
-                    "animationSpeed": 1.5
+                    "animationSpeed": 1.5,
+                    "sound": "game:creature/hooved/trot"
                 },
                 {
                     "code": "trot",
@@ -101,7 +102,8 @@
                     "fallbackGaitCode": "walk",
                     "animation": "Run",
                     "blendMode": "Average",
-                    "animationSpeed": 1.25
+                    "animationSpeed": 1.25,
+                    "sound": "game:creature/hooved/trot"
                 },
                 {
                     "code": "canter",
@@ -109,7 +111,8 @@
                     "yawMultiplier": 1,
                     "fallbackGaitCode": "trot",
                     "animation": "Run",
-                    "animationSpeed": 1.1
+                    "animationSpeed": 1.1,
+                    "sound": "game:creature/hooved/trot"
                 },
                 {
                     "code": "sprint",
@@ -120,7 +123,8 @@
                     "weight": 10,
                     "animationSpeed": 1.4,
                     "blendMode": "Average",
-                    "easeOutSpeed": 20
+                    "easeOutSpeed": 20,
+                    "sound": "game:creature/hooved/gallop"
                 },
                 {
                     "code": "swimforth",
@@ -161,7 +165,8 @@
                     "weight": 50,
                     "easeOutSpeed": 15,
                     "blendMode": "Average",
-                    "animationSpeed": 1.4
+                    "animationSpeed": 1.4,
+                    "sound": "game:creature/hooved/gallop"
                 }
             ]
         },
@@ -169,8 +174,12 @@
             "enabledByType": { "*-tamed-*": true, "*": false },
             "interactMountAnySeat": false,
             "seats": [
-                { "controllable": true,
-                    "riderOffset": { "x": 0, "y": -0.6, "z": 0 }
+                {
+                    "apName": "MidUpperAP",
+                    "selectionBox": "MidUpperAP",
+                    "bodyYawLimit": 0.2,
+                    "controllable": true,
+                    "riderOffset": { "x": 0, "y": -0.3, "z": 0 }
                 }
             ],
             "rideableGaitOrder": {
@@ -427,6 +436,45 @@
         "texturesByType": {
             "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
         },
+        "behaviors": [
+            { "code": "gait",
+                "enabledByType": { "*-tamed-*": true, "*-wild-*": false } },
+            { "code": "rideable",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "mouthinventory",
+                "enabledByType": { "*-tamed-*": true, "*": false },
+                "acceptStacks": [
+                    { "type": "item", "code": "vegetable-carrot" },
+                    { "type": "item", "code": "vegetable-cabbage" },
+                    { "type": "item", "code": "vegetable-turnip" },
+                    { "type": "item", "code": "feverstonehorses:carrotbundle" },
+                    { "type": "item", "code": "feverstonehorses:drygrassbundle" },
+                    { "type": "item", "code": "drygrass" },
+                    { "type": "item", "code": "fruit-pinkapple" },
+                    { "type": "item", "code": "fruit-redapple" },
+                    { "type": "item", "code": "fruit-yellowapple" },
+                    { "type": "item", "code": "grain-flax" },
+                    { "type": "item", "code": "grain-rye" },
+                    { "type": "item", "code": "grain-spelt" }
+                ]
+            },
+            { "code": "repulseagents" },
+            { "code": "harvestable" },
+            { "code": "controlledphysics" },
+            { "code": "floatupwhenstuck" },
+            { "code": "interpolateposition" },
+            { "code": "ownable" },
+            { "code": "selectionboxes",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "rideableaccessories",
+                "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "mortallywoundable" },
+            { "code": "health" },
+            { "code": "despawn",
+                "enabledByType": { "*-wild-*": true, "*": false },
+                "minPlayerDistance": 28, "belowLightLevel": 8, "minSeconds": 600 },
+            { "code": "ropetieable" }
+        ],
         "animations": [
             {
                 "code": "attack",
@@ -438,9 +486,31 @@
             {
                 "code": "idle",
                 "animation": "Idle",
-                "blendMode": "AddAverage",
-                "easeOutSpeed": 4,
-                "triggeredBy": { "defaultAnim": true }
+                "blendMode": "addAverage",
+                "easeOutSpeed": 3,
+                "triggeredBy": { "defaultAnim": true },
+                "animationSpeed": 0.5
+            },
+            {
+                "code": "sleep",
+                "animation": "Idle",
+                "blendMode": "Average",
+                "easeOutSpeed": 3,
+                "easeInSpeed": 3
+            },
+            {
+                "code": "sleeplie",
+                "animation": "Idle",
+                "blendMode": "Average",
+                "easeOutSpeed": 3,
+                "easeInSpeed": 3
+            },
+            {
+                "code": "sleepstand",
+                "animation": "Idle",
+                "blendMode": "Average",
+                "easeInSpeed": 3,
+                "easeOutSpeed": 3
             },
             {
                 "code": "hurt",
@@ -465,14 +535,28 @@
                 "easeInSpeed": 3
             },
             {
+                "code": "wounded-idle",
+                "animation": "Idle",
+                "easeInSpeed": 3,
+                "weight": 10,
+                "blendMode": "Average"
+            },
+            {
+                "code": "wounded-stand",
+                "animation": "Idle",
+                "weight": 10,
+                "blendMode": "Average"
+            },
+            {
                 "code": "swim",
                 "animation": "Walk",
+                "supressDefaultAnimation": true,
                 "blendMode": "Average"
             },
             {
                 "code": "walk",
                 "animation": "Walk",
-                "animationSpeed": 1.0
+                "blendMode": "Average"
             },
             {
                 "code": "trot",
@@ -490,11 +574,6 @@
                 "blendMode": "Average"
             },
             {
-                "code": "run",
-                "animation": "Run",
-                "animationSpeed": 1.0
-            },
-            {
                 "code": "jump",
                 "animation": "Run",
                 "blendMode": "Average",
@@ -502,40 +581,39 @@
                 "easeOutSpeed": 0.5,
                 "animationSpeed": 1.5,
                 "triggeredBy": { "onControls": ["jump"] }
-            }
-        ],
-        "behaviors": [
-            { "code": "repulseagents" },
-            { "code": "controlledphysics" },
-            { "code": "mortallywoundable" },
-            { "code": "health" },
-            { "code": "harvestable" },
-            { "code": "interpolateposition" },
-            { "code": "floatupwhenstuck" },
-            { "code": "gait" },
-            { "code": "rideable" },
-            { "code": "mouthinventory",
-                "enabledByType": { "*-tamed-*": true, "*": false },
-                "acceptStacks": [
-                    { "type": "item", "code": "vegetable-carrot" },
-                    { "type": "item", "code": "vegetable-cabbage" },
-                    { "type": "item", "code": "vegetable-turnip" },
-                    { "type": "item", "code": "feverstonehorses:carrotbundle" },
-                    { "type": "item", "code": "feverstonehorses:drygrassbundle" },
-                    { "type": "item", "code": "drygrass" },
-                    { "type": "item", "code": "fruit-pinkapple" },
-                    { "type": "item", "code": "fruit-redapple" },
-                    { "type": "item", "code": "fruit-yellowapple" },
-                    { "type": "item", "code": "grain-flax" },
-                    { "type": "item", "code": "grain-rye" },
-                    { "type": "item", "code": "grain-spelt" }
-                ]
             },
-            { "code": "selectionboxes",
-                "enabledByType": { "*-tamed-*": true, "*": false } },
-            { "code": "rideableaccessories",
-                "enabledByType": { "*-tamed-*": true, "*": false } },
-            { "code": "ropetieable" }
+            {
+                "code": "turn-left",
+                "animation": "Idle",
+                "easeInSpeed": 6,
+                "easeOutSpeed": 10,
+                "weight": 0.01,
+                "blendMode": "Average"
+            },
+            {
+                "code": "turn-right",
+                "animation": "Idle",
+                "easeInSpeed": 6,
+                "easeOutSpeed": 10,
+                "weight": 0.01,
+                "blendMode": "Average"
+            },
+            {
+                "code": "idle-turn-left",
+                "animation": "Idle",
+                "easeInSpeed": 3,
+                "easeOutSpeed": 10,
+                "weight": 0.01,
+                "blendMode": "Average"
+            },
+            {
+                "code": "idle-turn-right",
+                "animation": "Idle",
+                "easeInSpeed": 3,
+                "easeOutSpeed": 10,
+                "weight": 0.01,
+                "blendMode": "Average"
+            }
         ]
     },
     "server": {
@@ -592,7 +670,14 @@
                 ]
             },
             { "code": "breathe" },
-            { "code": "emotionstates" },
+            { "code": "emotionstates",
+                "states": [
+                    { "code": "aggressiveondamage", "duration": 30, "chance": 0.10, "slot": 0, "priority": 2, "accumType": "noaccum", "whenHealthRelBelow": 0.4 },
+                    { "code": "fleeondamage", "duration": 30, "chance": 1, "slot": 0, "priority": 1, "accumType": "max" },
+                    { "code": "saturated", "duration": 600, "chance": 0.4, "slot": 0, "priority": 1, "accumType": "sum" },
+                    { "code": "alarmherdondamage", "chance": 1, "slot": 1, "priority": 1, "accumType": "max" }
+                ]
+            },
             {
                 "code": "taskai",
                 "aiCreatureType": "LandCreature",
@@ -610,7 +695,10 @@
                     },
                     {
                         "code": "meleeattack",
-                        "entityCodes": [ "wolf-*", "hyena-*" ],
+                        "entityCodesbyType": {
+                            "*-tamed-*": [ "wolf-*", "hyena-*" ],
+                            "*": [ "player", "wolf-*", "hyena-*" ]
+                        },
                         "priority": 2,
                         "slot": 1,
                         "damage": 3,
@@ -621,7 +709,8 @@
                         "damagePlayerAtMs": 500,
                         "animation": "Idle",
                         "animationSpeed": 1.4,
-                        "whenInEmotionState": "aggressiveondamage"
+                        "whenInEmotionState": "aggressiveondamage",
+                        "sound": "horse/horseattack"
                     },
                     {
                         "code": "fleeentity",
@@ -716,6 +805,9 @@
                         "mincooldown": 6000,
                         "maxcooldown": 20000,
                         "animation": "Idle",
+                        "sound": "horse/horseeating",
+                        "soundRange": 3,
+                        "soundStartMs": 800,
                         "animationSpeed": 0.9
                     },
                     {
@@ -742,9 +834,9 @@
             },
             { "code": "selectionboxes",
                 "enabledByType": { "*-tamed-*": true, "*": false } },
+            { "code": "ownable", "groupCode": "mountableanimal" },
             { "code": "rideableaccessories",
                 "enabledByType": { "*-tamed-*": true, "*": false } },
-            { "code": "ownable", "groupCode": "mountableanimal" },
             { "code": "ropetieable" },
             { "code": "pettable", "minGeneration": 1 },
             { "code": "entitystatetags" }

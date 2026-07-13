@@ -38,7 +38,7 @@
     },
     "behaviorConfigs": {
         "controlledphysics": {
-            "stepHeight": 1.1,
+            "stepHeight": 1.1251,
             "stepUpSpeed": 0.1
         },
         "floatupwhenstuck": { "onlyWhenDead": true },
@@ -61,11 +61,11 @@
             "gaits": [
                 { "code": "walkback", "movespeed": 0.011, "backwards": true, "animation": "Walk", "animationSpeed": 1.4, "weight": 10, "blendMode": "Average" },
                 { "code": "idle", "animation": "Idle", "weight": 1 },
-                { "code": "walk", "movespeed": 0.018, "yawMultiplier": 1.2, "animation": "Walk", "animationSpeed": 1.5 },
-                { "code": "trot", "movespeed": 0.036, "yawMultiplier": 0.9, "fallbackGaitCode": "walk", "animation": "Run", "animationSpeed": 1.25, "blendMode": "Average" },
-                { "code": "canter", "movespeed": 0.075, "yawMultiplier": 1, "fallbackGaitCode": "trot", "animation": "Run", "animationSpeed": 1.1 },
-                { "code": "sprint", "movespeed": 0.1, "yawMultiplier": 0.8, "fallbackGaitCode": "trot", "animation": "Run", "animationSpeed": 1.4, "blendMode": "Average", "weight": 10, "easeOutSpeed": 20 },
-                { "code": "jump", "movespeed": 0.1, "yawMultiplier": 1, "fallbackGaitCode": "walk", "animation": "Run", "animationSpeed": 1.4, "weight": 50, "blendMode": "Average" },
+                { "code": "walk", "movespeed": 0.019, "yawMultiplier": 1.2, "animation": "Walk", "animationSpeed": 1.5, "sound": "game:creature/hooved/trot" },
+                { "code": "trot", "movespeed": 0.036, "yawMultiplier": 0.9, "fallbackGaitCode": "walk", "animation": "Run", "animationSpeed": 1.25, "blendMode": "Average", "sound": "game:creature/hooved/trot" },
+                { "code": "canter", "movespeed": 0.075, "yawMultiplier": 1, "fallbackGaitCode": "trot", "animation": "Run", "animationSpeed": 1.1, "sound": "game:creature/hooved/trot" },
+                { "code": "sprint", "movespeed": 0.1, "yawMultiplier": 0.8, "fallbackGaitCode": "trot", "animation": "Run", "animationSpeed": 1.4, "blendMode": "Average", "weight": 10, "easeOutSpeed": 20, "sound": "game:creature/hooved/gallop" },
+                { "code": "jump", "movespeed": 0.1, "yawMultiplier": 1, "fallbackGaitCode": "walk", "animation": "Run", "animationSpeed": 1.4, "weight": 50, "blendMode": "Average", "sound": "game:creature/hooved/gallop" },
                 { "code": "swimforth", "movespeed": 0.02, "fallbackGaitCode": "swimidle", "environment": "Sea", "animation": "Walk", "animationSpeed": 1.2, "blendMode": "Average" },
                 { "code": "swimidle", "movespeed": 0.0, "environment": "Sea", "animation": "Idle", "animationSpeed": 1.2, "blendMode": "Average" },
                 { "code": "swimback", "movespeed": 0.01, "backwards": true, "fallbackGaitCode": "swimidle", "environment": "Sea", "animation": "Walk", "animationSpeed": 1.2, "blendMode": "Average" }
@@ -74,7 +74,13 @@
         "rideable": {
             "interactMountAnySeat": false,
             "seats": [
-                { "controllable": true, "riderOffset": { "x": 0, "y": -0.6, "z": 0 } }
+                {
+                    "apName": "MidUpperAP",
+                    "selectionBox": "MidUpperAP",
+                    "bodyYawLimit": 0.2,
+                    "controllable": true,
+                    "riderOffset": { "x": 0, "y": -0.3, "z": 0 }
+                }
             ],
             "rideableGaitOrder": {
                 "Land": ["walkback", "idle", "walk", "sprint"],
@@ -90,27 +96,58 @@
         "texturesByType": {
             "*": { "Camel1.png": { "base": "entity/land/camel/Camel1" } }
         },
+        "behaviors": [
+            { "code": "gait" },
+            { "code": "rideable" },
+            { "code": "mouthinventory",
+                "acceptStacks": [
+                    { "type": "item", "code": "vegetable-carrot" },
+                    { "type": "item", "code": "vegetable-cabbage" },
+                    { "type": "item", "code": "vegetable-turnip" },
+                    { "type": "item", "code": "feverstonehorses:carrotbundle" },
+                    { "type": "item", "code": "feverstonehorses:drygrassbundle" },
+                    { "type": "item", "code": "drygrass" },
+                    { "type": "item", "code": "fruit-pinkapple" },
+                    { "type": "item", "code": "fruit-redapple" },
+                    { "type": "item", "code": "fruit-yellowapple" },
+                    { "type": "item", "code": "grain-flax" },
+                    { "type": "item", "code": "grain-rye" },
+                    { "type": "item", "code": "grain-spelt" }
+                ]
+            },
+            { "code": "repulseagents" },
+            { "code": "harvestable" },
+            { "code": "controlledphysics" },
+            { "code": "floatupwhenstuck" },
+            { "code": "interpolateposition" },
+            { "code": "ownable" },
+            { "code": "selectionboxes" },
+            { "code": "rideableaccessories" },
+            { "code": "mortallywoundable" },
+            { "code": "health" },
+            { "code": "ropetieable" }
+        ],
         "animations": [
-            { "code": "idle", "animation": "Idle", "blendMode": "AddAverage", "easeOutSpeed": 4, "triggeredBy": { "defaultAnim": true } },
-            { "code": "walk", "animation": "Walk", "animationSpeed": 1.0 },
-            { "code": "run", "animation": "Run", "animationSpeed": 1.0 },
+            { "code": "attack", "animation": "Idle", "animationSpeed": 2.2, "weight": 10, "blendMode": "AddAverage" },
+            { "code": "idle", "animation": "Idle", "blendMode": "addAverage", "easeOutSpeed": 3, "triggeredBy": { "defaultAnim": true }, "animationSpeed": 0.5 },
+            { "code": "sleep", "animation": "Idle", "blendMode": "Average", "easeOutSpeed": 3, "easeInSpeed": 3 },
+            { "code": "sleeplie", "animation": "Idle", "blendMode": "Average", "easeOutSpeed": 3, "easeInSpeed": 3 },
+            { "code": "sleepstand", "animation": "Idle", "blendMode": "Average", "easeInSpeed": 3, "easeOutSpeed": 3 },
+            { "code": "hurt", "animation": "Idle", "animationSpeed": 1.2, "weight": 10, "blendMode": "AddAverage" },
+            { "code": "die", "animation": "Idle", "easeInSpeed": 2, "weight": 10, "blendMode": "Average", "triggeredBy": { "onControls": [ "dead" ] } },
+            { "code": "dead", "animation": "Idle", "blendMode": "Average", "weight": 10, "easeInSpeed": 3 },
+            { "code": "wounded-idle", "animation": "Idle", "easeInSpeed": 3, "weight": 10, "blendMode": "Average" },
+            { "code": "wounded-stand", "animation": "Idle", "weight": 10, "blendMode": "Average" },
+            { "code": "swim", "animation": "Walk", "supressDefaultAnimation": true, "blendMode": "Average" },
+            { "code": "walk", "animation": "Walk", "blendMode": "Average" },
             { "code": "trot", "animation": "Run", "blendMode": "Average" },
             { "code": "canter", "animation": "Run", "blendMode": "Average" },
             { "code": "gallop", "animation": "Run", "blendMode": "Average" },
-            { "code": "jump", "animation": "Run", "blendMode": "Average" },
-            { "code": "swim", "animation": "Walk", "blendMode": "Average" }
-        ],
-        "behaviors": [
-            { "code": "repulseagents" },
-            { "code": "controlledphysics" },
-            { "code": "health" },
-            { "code": "interpolateposition" },
-            { "code": "floatupwhenstuck" },
-            { "code": "gait" },
-            { "code": "rideable" },
-            { "code": "selectionboxes" },
-            { "code": "rideableaccessories" },
-            { "code": "ropetieable" }
+            { "code": "jump", "animation": "Run", "blendMode": "Average", "easeInSpeed": 0.5, "easeOutSpeed": 0.5, "animationSpeed": 1.5, "triggeredBy": { "onControls": ["jump"] } },
+            { "code": "turn-left", "animation": "Idle", "easeInSpeed": 6, "easeOutSpeed": 10, "weight": 0.01, "blendMode": "Average" },
+            { "code": "turn-right", "animation": "Idle", "easeInSpeed": 6, "easeOutSpeed": 10, "weight": 0.01, "blendMode": "Average" },
+            { "code": "idle-turn-left", "animation": "Idle", "easeInSpeed": 3, "easeOutSpeed": 10, "weight": 0.01, "blendMode": "Average" },
+            { "code": "idle-turn-right", "animation": "Idle", "easeInSpeed": 3, "easeOutSpeed": 10, "weight": 0.01, "blendMode": "Average" }
         ]
     },
     "server": {
@@ -135,6 +172,7 @@
             },
             { "code": "repulseagents" },
             { "code": "controlledphysics" },
+            { "code": "mortallywoundable", "whenBelowHealth": 7 },
             { "code": "deaddecay", "hoursToDecay": 96, "decayedBlock": "carcass-large" },
             { "code": "floatupwhenstuck" },
             { "code": "health" },
@@ -148,7 +186,7 @@
             { "code": "breathe" },
             { "code": "emotionstates",
                 "states": [
-                    { "code": "aggressiveondamage", "duration": 30, "chance": 0.10, "slot": 0, "priority": 2, "whenHealthRelBelow": 0.4 },
+                    { "code": "aggressiveondamage", "duration": 30, "chance": 0.10, "slot": 0, "priority": 2, "accumType": "noaccum", "whenHealthRelBelow": 0.4 },
                     { "code": "fleeondamage", "duration": 30, "chance": 1, "slot": 0, "priority": 1, "accumType": "max" },
                     { "code": "saturated", "duration": 600, "chance": 0.4, "slot": 0, "priority": 1, "accumType": "sum" },
                     { "code": "alarmherdondamage", "chance": 1, "slot": 1, "priority": 1, "accumType": "max" }
@@ -169,8 +207,8 @@
                 ]
             },
             { "code": "selectionboxes" },
-            { "code": "rideableaccessories" },
             { "code": "ownable", "groupCode": "mountableanimal" },
+            { "code": "rideableaccessories" },
             { "code": "ropetieable" },
             { "code": "entitystatetags" }
         ]
