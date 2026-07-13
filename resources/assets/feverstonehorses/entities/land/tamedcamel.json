@@ -215,7 +215,7 @@
     },
     "soundsByType": {
         "*": {
-            "hurt": "feverstonehorses:camel/cameldamage",
+            "hurt": "feverstonehorses:camel/cameldamage*",
             "death": "feverstonehorses:camel/cameldeath",
             "idle": "feverstonehorses:camel/camelidle*",
             "wounded": "feverstonehorses:camel/camelwounded"

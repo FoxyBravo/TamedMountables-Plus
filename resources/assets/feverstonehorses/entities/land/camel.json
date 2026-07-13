@@ -710,7 +710,7 @@
                         "animation": "Idle",
                         "animationSpeed": 1.4,
                         "whenInEmotionState": "aggressiveondamage",
-                        "sound": "feverstonehorses:camel/camelattack"
+                        "sound": "feverstonehorses:camel/camelattack*"
                     },
                     {
                         "code": "fleeentity",
@@ -844,7 +844,7 @@
     },
     "soundsByType": {
         "*": {
-            "hurt": "feverstonehorses:camel/cameldamage",
+            "hurt": "feverstonehorses:camel/cameldamage*",
             "death": "feverstonehorses:camel/cameldeath",
             "idle": "feverstonehorses:camel/camelidle*",
             "wounded": "feverstonehorses:camel/camelwounded"
