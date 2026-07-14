@@ -5,7 +5,7 @@
 	  "side": "universal",
     "description" : "A horse mod made by the Feverstone Modding Team, includes various breeds of horses each with their own unique stats and uses! TamedAI-Plus integration fork.",
     "authors": ["Feverstone", "Ahrondus and Verlia", "FoxyBravo", "jorisvanduyse"],
-    "version": "2.8.0",
+    "version": "2.9.0",
     "dependencies": {
       "game": "1.22.1",
       "tamedaiplus": "5.1.69"
